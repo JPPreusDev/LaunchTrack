@@ -7,8 +7,6 @@ import { constructWebhookEvent, PLAN_FROM_PRICE_ID } from '@/lib/stripe/client'
 import { createServiceClient } from '@/lib/supabase/server'
 import Stripe from 'stripe'
 
-export const config = { api: { bodyParser: false } }
-
 export async function POST(request: NextRequest) {
   const body = await request.text()
   const signature = request.headers.get('stripe-signature')
