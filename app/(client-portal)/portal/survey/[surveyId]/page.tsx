@@ -35,7 +35,7 @@ export default async function CsatSurveyPage({ params }: PageProps) {
     .eq('survey_id', surveyId)
     .maybeSingle()
 
-  const project = survey.project as {
+  const project = survey.project as unknown as {
     name: string
     organization: { name: string; logo_url: string | null; brand_color: string } | null
   } | null

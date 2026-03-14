@@ -38,7 +38,7 @@ export function ExportButton({ projects }: ExportButtonProps) {
       p.name,
       (p.client as { name: string } | null)?.name ?? '',
       (p.client as { company_name?: string | null } | null)?.company_name ?? '',
-      getStatusLabel(p.status),
+      getStatusLabel(p.status as Parameters<typeof getStatusLabel>[0]),
       p.start_date ?? '',
       p.estimated_launch_date ?? '',
       p.total,

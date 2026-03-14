@@ -20,7 +20,7 @@ export default async function SettingsPage() {
 
   if (!profile || profile.role !== 'org_admin') redirect('/dashboard')
 
-  const org = profile.organization as { name: string; slug: string; plan: string }
+  const org = profile.organization as unknown as { name: string; slug: string; plan: string }
 
   const { data: members } = await supabase
     .from('memberships')

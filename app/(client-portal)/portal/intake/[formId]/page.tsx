@@ -36,7 +36,7 @@ export default async function IntakeFormPage({ params, searchParams }: PageProps
     placeholder: string | null; is_required: boolean; sort_order: number
   }[])].sort((a, b) => a.sort_order - b.sort_order)
 
-  const org = form.organization as { name: string; logo_url: string | null; brand_color: string } | null
+  const org = form.organization as unknown as { name: string; logo_url: string | null; brand_color: string } | null
   const orgName = org?.name ?? 'Your Agency'
   const accentColor = org?.brand_color ?? '#3b82f6'
 

@@ -126,9 +126,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               <ProjectStatusBadge status={project.status} />
             </div>
             <p className="text-slate-500 text-sm">
-              {(project.client as { name: string })?.name}
-              {(project.client as { company_name?: string })?.company_name &&
-                ` · ${(project.client as { company_name: string }).company_name}`}
+              {(project.client as unknown as { name: string })?.name}
+              {(project.client as unknown as { company_name?: string })?.company_name &&
+                ` · ${(project.client as unknown as { company_name: string }).company_name}`}
             </p>
           </div>
           <div className="text-right text-sm text-slate-500 space-y-1">
@@ -205,7 +205,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 </span>
               </div>
               <div className="p-4 space-y-2">
-                {(intakeResponses.answers as { value: string; field: { label: string } | null }[]).map((a, i) => (
+                {(intakeResponses.answers as unknown as { value: string; field: { label: string } | null }[]).map((a, i) => (
                   <div key={i}>
                     <p className="text-xs font-medium text-slate-500">{a.field?.label ?? 'Answer'}</p>
                     <p className="text-sm text-slate-800">{a.value || '—'}</p>

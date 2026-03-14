@@ -120,9 +120,9 @@ export default async function ProjectsPage() {
                     )}
                   </div>
                   <p className="text-sm text-slate-500">
-                    {(p.client as { name: string })?.name}
-                    {(p.client as { company_name?: string })?.company_name &&
-                      ` · ${(p.client as { company_name: string }).company_name}`}
+                    {(p.client as unknown as { name: string })?.name}
+                    {(p.client as unknown as { company_name?: string })?.company_name &&
+                      ` · ${(p.client as unknown as { company_name: string }).company_name}`}
                   </p>
                 </div>
 

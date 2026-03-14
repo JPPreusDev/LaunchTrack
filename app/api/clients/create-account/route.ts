@@ -76,7 +76,7 @@ export async function POST(request: NextRequest) {
 
     // Check if a client_user already exists for this email
     const { data: existingUsers } = await service.auth.admin.listUsers()
-    const existingAuthUser = existingUsers?.users?.find((u) => u.email === client.email)
+    const existingAuthUser = existingUsers?.users?.find((u: { email?: string }) => u.email === client.email)
 
     let authUserId: string
 

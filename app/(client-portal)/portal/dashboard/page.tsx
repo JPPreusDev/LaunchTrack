@@ -56,7 +56,7 @@ export default async function PortalDashboardPage() {
     redirect(`/portal/${projects[0].id}`)
   }
 
-  const org = profile.organization as {
+  const org = profile.organization as unknown as {
     name: string; logo_url: string | null; brand_color: string; portal_tagline: string | null
   }
   const accentColor = org?.brand_color ?? '#3b82f6'

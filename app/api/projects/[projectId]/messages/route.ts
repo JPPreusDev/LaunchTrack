@@ -102,7 +102,7 @@ export async function POST(request: NextRequest, { params }: Params) {
         .eq('id', projectId)
         .single()
 
-      const clientName = (projectDetails?.client as { name?: string } | null)?.name ?? 'Client'
+      const clientName = (projectDetails?.client as unknown as { name?: string } | null)?.name ?? 'Client'
       const projectName = projectDetails?.name ?? 'Unknown project'
       const excerpt = content.trim().length > 80
         ? content.trim().slice(0, 80) + '…'

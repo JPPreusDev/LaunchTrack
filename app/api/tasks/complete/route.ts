@@ -68,7 +68,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ data: { notified: 0 }, error: null })
     }
 
-    const project = task.project as {
+    const project = task.project as unknown as {
       id: string
       name: string
       organization: { id: string; name: string }

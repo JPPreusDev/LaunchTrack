@@ -148,10 +148,10 @@ export default async function DashboardPage() {
                   <tr key={p.id} className="hover:bg-slate-50 transition-colors">
                     <td className="px-6 py-4">
                       <p className="font-medium text-slate-900">
-                        {(p.client as { name: string })?.name}
+                        {(p.client as unknown as { name: string })?.name}
                       </p>
                       <p className="text-slate-400 text-xs">
-                        {(p.client as { company_name?: string })?.company_name}
+                        {(p.client as unknown as { company_name?: string })?.company_name}
                       </p>
                     </td>
                     <td className="px-6 py-4">

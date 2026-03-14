@@ -23,7 +23,7 @@ export async function sendEmail(payload: EmailPayload): Promise<void> {
     to: payload.to,
     subject: payload.subject,
     html: payload.html,
-    reply_to: payload.replyTo,
+    replyTo: payload.replyTo,
   })
 
   if (error) {

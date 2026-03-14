@@ -77,7 +77,7 @@ export default async function DashboardLayout({
       <div className="flex h-screen bg-slate-50 overflow-hidden">
         <Sidebar
           userRole={profile.role}
-          organizationName={(profile.organization as { name: string })?.name ?? ''}
+          organizationName={(profile.organization as unknown as { name: string })?.name ?? ''}
         />
         <div className="flex-1 flex flex-col overflow-hidden">
           <TopBar user={profile} />

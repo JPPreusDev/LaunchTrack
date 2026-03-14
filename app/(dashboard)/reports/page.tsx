@@ -74,7 +74,8 @@ export default async function ReportsPage() {
           <h1 className="text-2xl font-bold text-slate-900">Reports</h1>
           <p className="text-slate-500 text-sm mt-0.5">Project health, task completion, and CSAT overview</p>
         </div>
-        <ExportButton projects={enriched} />
+        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+        <ExportButton projects={enriched as any} />
       </div>
 
       {/* Summary KPIs */}
@@ -117,7 +118,7 @@ export default async function ReportsPage() {
                 <tr key={p.id} className="hover:bg-slate-50 transition-colors">
                   <td className="px-5 py-3.5 font-medium text-slate-900">{p.name}</td>
                   <td className="px-4 py-3.5 text-slate-500">
-                    {(p.client as { name: string })?.name ?? '—'}
+                    {(p.client as unknown as { name: string })?.name ?? '—'}
                   </td>
                   <td className="px-4 py-3.5">
                     <span className="text-xs text-slate-600">{getStatusLabel(p.status)}</span>

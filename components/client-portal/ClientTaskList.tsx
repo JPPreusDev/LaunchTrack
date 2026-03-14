@@ -188,7 +188,7 @@ export function ClientTaskList({ tasks, projectId, organizationId }: ClientTaskL
             {/* Right side: upload icon + status label */}
             <div className="flex items-center gap-2 flex-shrink-0">
               {task.is_asset_required && status === 'completed' && (
-                <Upload className="w-3.5 h-3.5 text-slate-300" title="Asset was required" />
+                <span title="Asset was required"><Upload className="w-3.5 h-3.5 text-slate-300" /></span>
               )}
               {status !== 'not_started' && (
                 <span className={cn(

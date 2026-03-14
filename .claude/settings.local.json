@@ -16,7 +16,8 @@
       "Bash(net stop:*)",
       "Bash(caddy version:*)",
       "Bash(cd \"C:\\\\Users\\\\Dell\\\\Downloads\\\\Claude Project\\\\onboarding\\\\launchtrack\" && caddy run 2>&1)",
-      "Bash(cd \"C:\\\\Users\\\\Dell\\\\Downloads\\\\Claude Project\\\\onboarding\\\\launchtrack\" && caddy.exe run 2>&1)"
+      "Bash(cd \"C:\\\\Users\\\\Dell\\\\Downloads\\\\Claude Project\\\\onboarding\\\\launchtrack\" && caddy.exe run 2>&1)",
+      "Bash(npm run:*)"
     ]
   }
 }

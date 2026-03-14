@@ -107,7 +107,7 @@ export default async function ClientPortalPage({ params }: PageProps) {
     (t) => t.status !== 'completed' && isOverdue(t.due_date)
   ).length
 
-  const org = project.organization as { id: string; name: string; logo_url: string | null; brand_color: string } | null
+  const org = project.organization as unknown as { id: string; name: string; logo_url: string | null; brand_color: string } | null
   const orgName = org?.name ?? 'Your Agency'
   const accentColor = org?.brand_color ?? '#3b82f6'
 

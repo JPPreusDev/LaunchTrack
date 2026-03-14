@@ -81,7 +81,7 @@ export default function PortalSettingsPage() {
         return
       }
 
-      const orgData = profile.organization as OrgData
+      const orgData = profile.organization as unknown as OrgData
       setOrg(orgData)
       setBrandColor(orgData.brand_color ?? '#3b82f6')
       setTagline(orgData.portal_tagline ?? '')

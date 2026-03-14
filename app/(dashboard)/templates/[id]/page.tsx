@@ -141,7 +141,7 @@ export default function TemplateDetailPage() {
     setAssignments((assignmentsRes.data ?? []) as AssignmentWithUser[])
     setMembers(
       (membersRes.data ?? [])
-        .map((m) => m.user as Member)
+        .map((m) => m.user as unknown as Member)
         .filter(Boolean)
     )
     setLoading(false)
