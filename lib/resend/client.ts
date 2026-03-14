@@ -3,7 +3,11 @@
  */
 import { Resend } from 'resend'
 
-export const resend = new Resend(process.env.RESEND_API_KEY)
+let _resend: Resend | null = null
+function getResend(): Resend {
+  if (!_resend) _resend = new Resend(process.env.RESEND_API_KEY)
+  return _resend
+}
 
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL ?? 'noreply@launchtrack.io'
 
@@ -18,7 +22,7 @@ export interface EmailPayload {
  * Send a transactional email via Resend.
  */
 export async function sendEmail(payload: EmailPayload): Promise<void> {
-  const { data, error } = await resend.emails.send({
+  const { data, error } = await getResend().emails.send({
     from: FROM_EMAIL,
     to: payload.to,
     subject: payload.subject,
