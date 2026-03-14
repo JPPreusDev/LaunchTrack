@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(dir C:\\\\Users\\\\Dell\\\\Downloads\\\\Claude Project\\\\onboarding\\\\launchtrack:*)",
+      "WebSearch",
+      "Bash(xargs ls -la)",
+      "Bash(cd:*)",
+      "Bash(cd:)",
+      "Bash(ls:*)",
+      "Bash(head:*)",
+      "Bash(grep:*)",
+      "Bash(grep error TS:*)",
+      "Bash(cd C:\\\\Users\\\\Dell\\\\Downloads\\\\Claude Project\\\\onboarding\\\\launchtrack:*)",
+      "Bash(Start-Process:*)",
+      "Bash(net stop:*)",
+      "Bash(caddy version:*)",
+      "Bash(cd \"C:\\\\Users\\\\Dell\\\\Downloads\\\\Claude Project\\\\onboarding\\\\launchtrack\" && caddy run 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\Dell\\\\Downloads\\\\Claude Project\\\\onboarding\\\\launchtrack\" && caddy.exe run 2>&1)"
+    ]
+  }
+}
