@@ -48,7 +48,7 @@ export default async function PortalDashboardPage() {
   }
 
   const projects = (accessRows ?? [])
-    .map((row) => row.project as Project)
+    .map((row) => row.project as unknown as Project)
     .filter(Boolean)
 
   // If only one project, redirect straight to it
