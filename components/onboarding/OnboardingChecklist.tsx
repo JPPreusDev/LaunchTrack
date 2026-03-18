@@ -27,7 +27,7 @@ export function OnboardingChecklist() {
         <div>
           <div className="flex items-center gap-2 mb-0.5">
             <span className="text-lg" role="img" aria-label="rocket">🚀</span>
-            <h2 className="font-semibold text-slate-900">Get Started with Rampify</h2>
+            <h2 className="font-semibold text-slate-900">Get Started with OnRampd</h2>
           </div>
           <p className="text-sm text-slate-500">
             {completedCount} of {TOUR_ORDER.length} steps completed

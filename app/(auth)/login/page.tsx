@@ -44,7 +44,7 @@ export default function LoginPage() {
                   d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <span className="text-xl font-bold text-slate-900">Rampify</span>
+            <span className="text-xl font-bold text-slate-900">OnRampd</span>
           </div>
           <p className="text-slate-500 text-sm">Sign in to your account</p>
         </div>

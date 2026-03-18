@@ -1,5 +1,5 @@
 /**
- * Rampify - Core Type Definitions
+ * OnRampd - Core Type Definitions
  */
 
 export type UserRole = 'org_admin' | 'team_member' | 'client_user'
@@ -269,7 +269,7 @@ export interface IntegrationMapping {
   id: string
   organization_id: string
   provider: string
-  rampify_project_id: string | null
+  onrampd_project_id: string | null
   external_project_id: string
   mapping_type: string
   metadata: Record<string, unknown>

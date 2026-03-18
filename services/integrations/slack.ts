@@ -127,7 +127,7 @@ export async function sendSlackTaskOverdue({
     blocks: [
       {
         type: 'header',
-        text: { type: 'plain_text', text: '⚠️ Task Overdue — Rampify' },
+        text: { type: 'plain_text', text: '⚠️ Task Overdue — OnRampd' },
       },
       {
         type: 'section',
@@ -172,7 +172,7 @@ export async function sendSlackProjectStuck({
     blocks: [
       {
         type: 'header',
-        text: { type: 'plain_text', text: '🔴 Project Stuck — Rampify' },
+        text: { type: 'plain_text', text: '🔴 Project Stuck — OnRampd' },
       },
       {
         type: 'section',
@@ -217,7 +217,7 @@ export async function sendSlackAssetSubmitted({
     blocks: [
       {
         type: 'header',
-        text: { type: 'plain_text', text: '✅ Asset Submitted — Rampify' },
+        text: { type: 'plain_text', text: '✅ Asset Submitted — OnRampd' },
       },
       {
         type: 'section',

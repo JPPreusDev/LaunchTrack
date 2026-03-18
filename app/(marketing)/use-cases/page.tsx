@@ -1,5 +1,5 @@
 /**
- * Use cases page — agency verticals that benefit from Rampify.
+ * Use cases page — agency verticals that benefit from OnRampd.
  */
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
@@ -10,7 +10,7 @@ const USE_CASES = [
     heading: 'Marketing Agencies',
     tagline: 'Stop chasing clients for brand assets and approvals.',
     description:
-      'Marketing agencies lose weeks on every new account waiting for logos, passwords, and sign-offs. Rampify structures the whole intake → creative → approval loop so you can start billing faster.',
+      'Marketing agencies lose weeks on every new account waiting for logos, passwords, and sign-offs. OnRampd structures the whole intake → creative → approval loop so you can start billing faster.',
     benefits: [
       'Branded onboarding portal impresses new clients from day one',
       'Structured asset requests for brand guidelines, copy, and ad accounts',
@@ -24,7 +24,7 @@ const USE_CASES = [
     heading: 'Web & Development Agencies',
     tagline: 'From signed contract to first sprint in days, not weeks.',
     description:
-      'Dev agencies need hosting credentials, design assets, and technical specs before they can write a line of code. Rampify\'s intake forms and asset requests get you everything upfront — structured and tracked.',
+      'Dev agencies need hosting credentials, design assets, and technical specs before they can write a line of code. OnRampd\'s intake forms and asset requests get you everything upfront — structured and tracked.',
     benefits: [
       'Custom intake form collects server access, domain credentials, and specs',
       'Task dependencies prevent devs from working on blocked items',
@@ -38,7 +38,7 @@ const USE_CASES = [
     heading: 'Creative Studios',
     tagline: 'Keep clients informed while you do the creative work.',
     description:
-      'Creative studios need space to create, but clients need visibility. Rampify\'s portal gives clients real-time progress updates without interrupting your process.',
+      'Creative studios need space to create, but clients need visibility. OnRampd\'s portal gives clients real-time progress updates without interrupting your process.',
     benefits: [
       'Phase-based project view shows exactly where the creative is in the process',
       'Asset upload portal means fewer "can you send me that file" emails',
@@ -52,14 +52,14 @@ const USE_CASES = [
     heading: 'Consulting Firms',
     tagline: 'Deliver structured, professional client onboarding at scale.',
     description:
-      'Consultants build their reputation on professionalism. A Rampify-powered onboarding experience signals to new clients that they made the right choice.',
+      'Consultants build their reputation on professionalism. A OnRampd-powered onboarding experience signals to new clients that they made the right choice.',
     benefits: [
       'Custom domain makes the portal feel like your own proprietary tool',
       'Intake forms gather stakeholder info, goals, and constraints upfront',
       'Phase templates reflect your consulting methodology',
       'Reports give clients (and your team) a clear view of engagement',
     ],
-    quote: '"Clients comment on how smooth the onboarding is. We use Rampify templates for every new engagement." — Partner, Meridian Consulting',
+    quote: '"Clients comment on how smooth the onboarding is. We use OnRampd templates for every new engagement." — Partner, Meridian Consulting',
   },
 ]
 
@@ -70,7 +70,7 @@ export default function UseCasesPage() {
         <h1 className="text-4xl font-extrabold text-slate-900 mb-4">Built for every kind of agency</h1>
         <p className="text-slate-500 text-lg max-w-2xl mx-auto">
           Whether you run a marketing agency, dev shop, creative studio, or consulting firm —
-          Rampify fits the way you work.
+          OnRampd fits the way you work.
         </p>
       </section>
 

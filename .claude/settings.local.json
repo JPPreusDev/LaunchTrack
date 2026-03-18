@@ -27,7 +27,9 @@
       "WebFetch(domain:launchtrack-seven.vercel.app)",
       "Bash(npm i:*)",
       "Bash(sed:*)",
-      "Bash(npx skills:*)"
+      "Bash(npx skills:*)",
+      "WebFetch(domain:www.namecheap.com)",
+      "WebFetch(domain:instantdomainsearch.com)"
     ]
   }
 }

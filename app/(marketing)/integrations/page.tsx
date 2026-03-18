@@ -1,5 +1,5 @@
 /**
- * Integrations page — what Rampify connects with.
+ * Integrations page — what OnRampd connects with.
  */
 import Link from 'next/link'
 import { ArrowRight, Zap } from 'lucide-react'
@@ -32,7 +32,7 @@ const INTEGRATIONS = [
   {
     name: 'Zapier',
     category: 'Automation',
-    description: 'Connect Rampify to 6,000+ apps. Trigger workflows when tasks complete or projects launch.',
+    description: 'Connect OnRampd to 6,000+ apps. Trigger workflows when tasks complete or projects launch.',
     status: 'coming_soon',
   },
   {
@@ -50,7 +50,7 @@ const INTEGRATIONS = [
   {
     name: 'Webhooks',
     category: 'Developer',
-    description: 'Subscribe to any Rampify event via webhooks and build your own integrations.',
+    description: 'Subscribe to any OnRampd event via webhooks and build your own integrations.',
     status: 'coming_soon',
   },
 ]
@@ -63,7 +63,7 @@ export default function IntegrationsPage() {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 pt-20 pb-12 text-center">
         <h1 className="text-4xl font-extrabold text-slate-900 mb-4">Integrations</h1>
         <p className="text-slate-500 text-lg max-w-xl mx-auto">
-          Rampify works with the tools your agency already uses — and a growing list of new connections coming soon.
+          OnRampd works with the tools your agency already uses — and a growing list of new connections coming soon.
         </p>
       </section>
 
@@ -99,7 +99,7 @@ export default function IntegrationsPage() {
           <Zap className="w-8 h-8 text-red-700 mx-auto mb-4" />
           <h2 className="text-xl font-bold text-slate-900 mb-2">Need a custom integration?</h2>
           <p className="text-slate-500 mb-5 max-w-md mx-auto text-sm">
-            The Rampify API (available on Scale plan) lets you build anything — push projects
+            The OnRampd API (available on Scale plan) lets you build anything — push projects
             from your CRM, sync tasks to your PM tool, or automate client communications.
           </p>
           <Link

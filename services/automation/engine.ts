@@ -1,5 +1,5 @@
 /**
- * Rampify Automation Engine.
+ * OnRampd Automation Engine.
  * Evaluates rules and triggers actions for overdue tasks,
  * pending assets, and stuck projects.
  */

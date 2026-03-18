@@ -43,7 +43,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
             <div className="w-8 h-8 bg-red-700 rounded-lg flex items-center justify-center">
               <Zap className="w-4 h-4 text-white" />
             </div>
-            Rampify
+            OnRampd
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -88,7 +88,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
                 <div className="w-7 h-7 bg-red-600 rounded-lg flex items-center justify-center">
                   <Zap className="w-3.5 h-3.5 text-white" />
                 </div>
-                <span className="font-bold text-white">Rampify</span>
+                <span className="font-bold text-white">OnRampd</span>
               </div>
               <p className="text-sm leading-relaxed">
                 The client onboarding platform that gets your projects from signed to live — faster.
@@ -112,7 +112,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
           </div>
 
           <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-            <p>© {new Date().getFullYear()} Rampify. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} OnRampd. All rights reserved.</p>
             <div className="flex items-center gap-4">
               <Link href="/legal/privacy" className="hover:text-white transition-colors">Privacy</Link>
               <Link href="/legal/terms" className="hover:text-white transition-colors">Terms</Link>

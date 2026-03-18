@@ -9,7 +9,7 @@ function getResend(): Resend {
   return _resend
 }
 
-const FROM_EMAIL = process.env.RESEND_FROM_EMAIL ?? 'noreply@rampify.io'
+const FROM_EMAIL = process.env.RESEND_FROM_EMAIL ?? 'noreply@onrampd.io'
 
 export interface EmailPayload {
   to: string | string[]
@@ -67,7 +67,7 @@ export function buildEmailHtml({
   <div style="max-width:600px;margin:40px auto;background:#ffffff;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
     <!-- Header -->
     <div style="background:#0f172a;padding:24px 32px;">
-      <h1 style="margin:0;color:#ffffff;font-size:20px;font-weight:700;">Rampify</h1>
+      <h1 style="margin:0;color:#ffffff;font-size:20px;font-weight:700;">OnRampd</h1>
       <p style="margin:4px 0 0;color:#94a3b8;font-size:13px;">by ${agencyName}</p>
     </div>
 
@@ -92,7 +92,7 @@ export function buildEmailHtml({
     <!-- Footer -->
     <div style="border-top:1px solid #e2e8f0;padding:20px 32px;">
       <p style="margin:0;color:#94a3b8;font-size:12px;">
-        This email was sent by ${agencyName} via Rampify.
+        This email was sent by ${agencyName} via OnRampd.
         If you have questions, reply to this email.
       </p>
     </div>

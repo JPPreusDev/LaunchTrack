@@ -1,7 +1,7 @@
 /**
  * Jira Integration Service.
  * Jira Cloud OAuth 2.0 (3-legged) + issue push.
- * Supports: syncing Rampify tasks to Jira Cloud issues.
+ * Supports: syncing OnRampd tasks to Jira Cloud issues.
  */
 import { createServiceClient } from '@/lib/supabase/server'
 import { encrypt, decrypt } from '@/lib/crypto/tokens'
@@ -174,7 +174,7 @@ async function getJiraToken(organizationId: string): Promise<{
 }
 
 /**
- * Create a Jira issue from a Rampify task.
+ * Create a Jira issue from a OnRampd task.
  * Requires an integration_mapping with external_project_id = "JIRA_PROJECT_KEY".
  */
 export async function createJiraIssue(

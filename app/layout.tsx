@@ -7,7 +7,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Rampify — Client Onboarding Management',
+  title: 'OnRampd — Client Onboarding Management',
   description:
     'Reduce onboarding delays, automate asset collection, and track time-to-launch for your agency clients.',
 }

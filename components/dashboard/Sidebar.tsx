@@ -60,7 +60,7 @@ export function Sidebar({ userRole, organizationName }: SidebarProps) {
             <Zap className="w-4 h-4 text-white" />
           </div>
           <div className="overflow-hidden">
-            <p className="text-white font-semibold text-sm">Rampify</p>
+            <p className="text-white font-semibold text-sm">OnRampd</p>
             <p className="text-slate-400 text-xs truncate">{organizationName}</p>
           </div>
         </div>
@@ -95,7 +95,7 @@ export function Sidebar({ userRole, organizationName }: SidebarProps) {
 
       {/* Footer */}
       <div className="p-3 border-t border-slate-800">
-        <p className="text-xs text-slate-600 text-center">Rampify v0.1</p>
+        <p className="text-xs text-slate-600 text-center">OnRampd v0.1</p>
       </div>
     </aside>
   )

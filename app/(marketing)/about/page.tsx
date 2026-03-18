@@ -13,12 +13,12 @@ const VALUES = [
   {
     title: 'Invisible technology',
     description:
-      'The best tool is one your clients never know is there. Rampify hides behind your brand, so you get the credit for a seamless experience.',
+      'The best tool is one your clients never know is there. OnRampd hides behind your brand, so you get the credit for a seamless experience.',
   },
   {
     title: 'Simplicity over complexity',
     description:
-      'We say no to feature bloat. Every addition to Rampify must make onboarding simpler — for you or for your clients.',
+      'We say no to feature bloat. Every addition to OnRampd must make onboarding simpler — for you or for your clients.',
   },
   {
     title: 'Transparency',
@@ -36,16 +36,16 @@ export default function AboutPage() {
             We built the tool we always wanted
           </h1>
           <p className="text-lg text-slate-600 leading-relaxed mb-4">
-            Rampify started because client onboarding was broken. Projects stalled waiting on
+            OnRampd started because client onboarding was broken. Projects stalled waiting on
             assets. Clients didn't know what to do next. Teams sent the same follow-up emails every
             week. Everyone was frustrated.
           </p>
           <p className="text-lg text-slate-600 leading-relaxed mb-4">
-            We built Rampify to give agencies a repeatable, professional system — and to give
+            We built OnRampd to give agencies a repeatable, professional system — and to give
             clients a clear, branded window into their project.
           </p>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Today, hundreds of agencies use Rampify to cut their average onboarding time,
+            Today, hundreds of agencies use OnRampd to cut their average onboarding time,
             improve client satisfaction scores, and stop losing time to admin work.
           </p>
         </div>

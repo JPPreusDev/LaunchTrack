@@ -215,7 +215,7 @@ export default function PortalSettingsPage() {
       <div>
         <h1 className="text-2xl font-bold text-slate-900">Client Portal</h1>
         <p className="text-slate-500 text-sm mt-0.5">
-          White-labeled login portal for your clients — no Rampify branding.
+          White-labeled login portal for your clients — no OnRampd branding.
         </p>
       </div>
 
@@ -314,7 +314,7 @@ export default function PortalSettingsPage() {
 
               <div>
                 <p className="text-xs font-medium text-slate-500 uppercase tracking-wide mb-1.5">
-                  Step 1 — CNAME record (point domain to Rampify)
+                  Step 1 — CNAME record (point domain to OnRampd)
                 </p>
                 <div className="grid grid-cols-2 gap-2 text-xs font-mono">
                   <div>
@@ -340,13 +340,13 @@ export default function PortalSettingsPage() {
                   <div>
                     <span className="text-slate-400">Host</span>
                     <div className="mt-0.5 bg-white border border-slate-200 rounded px-2 py-1 truncate">
-                      _rampify.{savedCustomDomain}
+                      _onrampd.{savedCustomDomain}
                     </div>
                   </div>
                   <div>
                     <span className="text-slate-400">Value</span>
                     <div className="mt-0.5 bg-white border border-slate-200 rounded px-2 py-1 truncate">
-                      rampify-verify={verifyToken}
+                      onrampd-verify={verifyToken}
                     </div>
                   </div>
                 </div>

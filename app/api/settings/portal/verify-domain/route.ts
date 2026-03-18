@@ -4,8 +4,8 @@
  * Restricted to org_admin role.
  *
  * Expected TXT record:
- *   Host:  _rampify.{custom_domain}
- *   Value: rampify-verify={custom_domain_verify_token}
+ *   Host:  _onrampd.{custom_domain}
+ *   Value: onrampd-verify={custom_domain_verify_token}
  */
 import { NextResponse } from 'next/server'
 import { promises as dns } from 'dns'
@@ -42,8 +42,8 @@ export async function POST() {
     )
   }
 
-  const lookupHost = `_rampify.${org.custom_domain}`
-  const expectedValue = `rampify-verify=${org.custom_domain_verify_token}`
+  const lookupHost = `_onrampd.${org.custom_domain}`
+  const expectedValue = `onrampd-verify=${org.custom_domain_verify_token}`
 
   try {
     const records = await dns.resolveTxt(lookupHost)

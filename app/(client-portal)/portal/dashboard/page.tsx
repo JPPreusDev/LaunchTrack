@@ -1,6 +1,6 @@
 /**
  * Client portal dashboard — lists all projects the logged-in client has access to.
- * White-labeled with agency branding. No Rampify branding.
+ * White-labeled with agency branding. No OnRampd branding.
  */
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'

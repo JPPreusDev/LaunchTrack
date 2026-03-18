@@ -1,5 +1,5 @@
 /**
- * Stripe client and helpers for Rampify billing.
+ * Stripe client and helpers for OnRampd billing.
  */
 import Stripe from 'stripe'
 import { type SubscriptionPlan } from '@/types'

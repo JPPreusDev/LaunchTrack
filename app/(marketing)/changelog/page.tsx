@@ -33,7 +33,7 @@ const ENTRIES = [
       {
         type: 'New',
         items: [
-          'Custom subdomain branding (myagency.rampify.com)',
+          'Custom subdomain branding (myagency.onrampd.com)',
           'Custom domain support with CNAME + TXT verification',
           'Portal branding settings — upload logo, set brand color, custom tagline',
         ],
@@ -41,7 +41,7 @@ const ENTRIES = [
       {
         type: 'Improved',
         items: [
-          'Portal login page now fully white-labeled — no Rampify branding visible',
+          'Portal login page now fully white-labeled — no OnRampd branding visible',
           'Middleware now handles clean subdomain URLs',
         ],
       },
@@ -80,7 +80,7 @@ const ENTRIES = [
       {
         type: 'New',
         items: [
-          'Initial release of Rampify',
+          'Initial release of OnRampd',
           'Multi-tenant agency dashboard',
           'White-labeled client portal',
           'Phase + task management with status cycling',
@@ -105,7 +105,7 @@ export default function ChangelogPage() {
       <section className="max-w-3xl mx-auto px-4 sm:px-6 pt-20 pb-12 text-center">
         <h1 className="text-4xl font-extrabold text-slate-900 mb-4">Changelog</h1>
         <p className="text-slate-500 text-lg">
-          Everything new in Rampify — shipped regularly, documented openly.
+          Everything new in OnRampd — shipped regularly, documented openly.
         </p>
       </section>
 

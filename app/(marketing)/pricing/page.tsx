@@ -204,8 +204,8 @@ export default function PricingPage() {
                 a: 'We\'ll ask you to choose a plan. Your data is safe — nothing is deleted.',
               },
               {
-                q: 'Do clients need a Rampify account?',
-                a: 'No. Clients access their portal via a magic link or password login. They never see the Rampify brand.',
+                q: 'Do clients need a OnRampd account?',
+                a: 'No. Clients access their portal via a magic link or password login. They never see the OnRampd brand.',
               },
               {
                 q: 'Can I use my own domain for the client portal?',

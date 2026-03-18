@@ -83,7 +83,7 @@ export default function HowItWorksPage() {
   return (
     <>
       <section className="max-w-3xl mx-auto px-4 sm:px-6 pt-20 pb-12 text-center">
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-4">How Rampify works</h1>
+        <h1 className="text-4xl font-extrabold text-slate-900 mb-4">How OnRampd works</h1>
         <p className="text-slate-500 text-lg">
           A structured, repeatable system that gets clients from signed to live — every time.
         </p>

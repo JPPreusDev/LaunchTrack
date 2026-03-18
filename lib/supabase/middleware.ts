@@ -2,7 +2,7 @@
  * Supabase middleware client — session refresh + subdomain/custom-domain portal routing.
  *
  * Routing modes:
- *   myagency.rampify.com  →  sets x-portal-org header, rewrites / to /portal/login
+ *   myagency.onrampd.com  →  sets x-portal-org header, rewrites / to /portal/login
  *   myagency.com (CNAME'd)    →  same, after DB lookup for verified custom domain
  */
 import { createServerClient, type CookieOptionsWithName } from '@supabase/ssr'

@@ -52,7 +52,7 @@ export default function ContactPage() {
             {[
               {
                 title: 'Book a demo',
-                desc: 'See Rampify in action with a 30-minute walkthrough tailored to your agency.',
+                desc: 'See OnRampd in action with a 30-minute walkthrough tailored to your agency.',
               },
               {
                 title: 'Sales questions',

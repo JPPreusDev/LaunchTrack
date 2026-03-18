@@ -11,7 +11,7 @@ const FEATURES = [
   {
     icon: Zap,
     title: 'White-labeled client portal',
-    description: 'Your brand, your domain. Clients see your logo — Rampify stays invisible.',
+    description: 'Your brand, your domain. Clients see your logo — OnRampd stays invisible.',
   },
   {
     icon: CheckCircle2,
@@ -42,7 +42,7 @@ const FEATURES = [
 
 const TESTIMONIALS = [
   {
-    quote: 'Rampify cut our average onboarding time from 6 weeks to 3. Clients actually know what to do next.',
+    quote: 'OnRampd cut our average onboarding time from 6 weeks to 3. Clients actually know what to do next.',
     name: 'Sarah Chen',
     role: 'Operations Director, Pixel & Co.',
     score: 5,
@@ -78,7 +78,7 @@ export default function HomePage() {
             <span className="text-red-500">in half the time</span>
           </h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Rampify gives your agency a white-labeled client portal, structured onboarding phases,
+            OnRampd gives your agency a white-labeled client portal, structured onboarding phases,
             real-time chat, and CSAT — so you can get from signed to launched faster.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -117,7 +117,7 @@ export default function HomePage() {
             Everything your team needs to deliver great onboarding
           </h2>
           <p className="text-slate-500 max-w-xl mx-auto">
-            From intake form to live launch — Rampify keeps clients informed, assets collected,
+            From intake form to live launch — OnRampd keeps clients informed, assets collected,
             and your team on track.
           </p>
         </div>
@@ -143,7 +143,7 @@ export default function HomePage() {
       <section className="bg-slate-50 py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-slate-900 mb-3">How Rampify works</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">How OnRampd works</h2>
             <p className="text-slate-500 max-w-xl mx-auto">
               Set up once, run it for every client. Your onboarding becomes a repeatable system.
             </p>
@@ -170,7 +170,7 @@ export default function HomePage() {
       {/* Testimonials */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-24">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-bold text-slate-900 mb-3">Agencies love Rampify</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-3">Agencies love OnRampd</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {TESTIMONIALS.map((t) => (

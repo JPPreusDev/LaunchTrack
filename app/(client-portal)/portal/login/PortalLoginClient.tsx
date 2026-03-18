@@ -194,7 +194,7 @@ export function PortalLoginClient({ orgSlug }: PortalLoginClientProps) {
           </div>
         </div>
 
-        {/* No Rampify branding here */}
+        {/* No OnRampd branding here */}
       </div>
     </div>
   )

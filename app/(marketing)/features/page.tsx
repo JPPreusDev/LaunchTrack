@@ -1,5 +1,5 @@
 /**
- * Features page — detailed breakdown of all Rampify capabilities.
+ * Features page — detailed breakdown of all OnRampd capabilities.
  */
 import Link from 'next/link'
 import {
@@ -16,11 +16,11 @@ const FEATURE_GROUPS = [
     features: [
       {
         title: 'White-labeled, fully branded',
-        description: 'Clients land on your brand. Use your logo, brand colors, and custom domain. Rampify is completely invisible.',
+        description: 'Clients land on your brand. Use your logo, brand colors, and custom domain. OnRampd is completely invisible.',
       },
       {
         title: 'Custom subdomain & domain',
-        description: 'Get myagency.rampify.com automatically, or point your own domain (myagency.com) with a simple CNAME.',
+        description: 'Get myagency.onrampd.com automatically, or point your own domain (myagency.com) with a simple CNAME.',
       },
       {
         title: 'Magic link access',
@@ -183,7 +183,7 @@ export default function FeaturesPage() {
           Every tool your agency needs to onboard clients well
         </h1>
         <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-          From the first intake form to the CSAT survey at launch — Rampify handles the full
+          From the first intake form to the CSAT survey at launch — OnRampd handles the full
           onboarding lifecycle in one platform.
         </p>
       </section>
