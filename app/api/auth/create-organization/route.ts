@@ -6,6 +6,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase/server'
 import { generateSlug } from '@/lib/utils'
+import { seedOrgTemplates } from '@/lib/templates/seed-org-templates'
 
 export async function POST(request: NextRequest) {
   try {
@@ -85,6 +86,9 @@ export async function POST(request: NextRequest) {
     await supabase.from('service_categories').insert(
       defaultCategories.map((name) => ({ organization_id: org.id, name }))
     )
+
+    // Seed starter templates
+    await seedOrgTemplates(supabase, org.id)
 
     // Create default automation rules
     await supabase.from('automation_rules').insert([
