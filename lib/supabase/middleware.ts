@@ -103,6 +103,7 @@ export async function updateSession(request: NextRequest) {
     '/forgot-password',
     '/reset-password',
     '/portal',
+    '/api/auth',
     '/api/webhooks',
     '/api/integrations',
     '/api/contact',
