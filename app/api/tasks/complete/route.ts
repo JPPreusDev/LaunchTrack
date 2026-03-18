@@ -113,7 +113,7 @@ export async function POST(request: NextRequest) {
             heading: 'Client task completed',
             body: `
               <p><strong>${clientName}</strong> has just completed a task in your service category:</p>
-              <div style="margin:16px 0;padding:16px;background:#f8fafc;border-left:4px solid #3b82f6;border-radius:4px;">
+              <div style="margin:16px 0;padding:16px;background:#f8fafc;border-left:4px solid #B91C1C;border-radius:4px;">
                 <p style="margin:0;font-weight:600;color:#0f172a;">${task.title}</p>
                 <p style="margin:4px 0 0;color:#64748b;font-size:13px;">Project: ${project.name}</p>
               </div>

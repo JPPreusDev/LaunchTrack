@@ -15,7 +15,7 @@ interface AssetRequestCardProps {
 
 const STATUS_CONFIG: Record<AssetRequestStatus, { label: string; icon: React.ComponentType<{ className?: string }>; color: string }> = {
   pending: { label: 'Pending', icon: Clock, color: 'text-amber-600 bg-amber-50' },
-  submitted: { label: 'Submitted', icon: Upload, color: 'text-blue-600 bg-blue-50' },
+  submitted: { label: 'Submitted', icon: Upload, color: 'text-red-700 bg-red-50' },
   approved: { label: 'Approved', icon: CheckCircle2, color: 'text-green-600 bg-green-50' },
   rejected: { label: 'Rejected', icon: XCircle, color: 'text-red-600 bg-red-50' },
 }
@@ -135,7 +135,7 @@ export function AssetRequestCard({ asset, projectId, isAdmin }: AssetRequestCard
               disabled={uploading}
             />
             <span className={cn(
-              'inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white text-xs font-medium rounded-lg hover:bg-blue-700 transition-colors',
+              'inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-700 text-white text-xs font-medium rounded-lg hover:bg-red-800 transition-colors',
               uploading && 'opacity-50 cursor-not-allowed'
             )}>
               <Upload className="w-3.5 h-3.5" />

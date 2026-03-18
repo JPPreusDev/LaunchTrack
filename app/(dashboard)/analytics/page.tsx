@@ -156,10 +156,10 @@ export default async function AnalyticsPage() {
       {/* Summary cards */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
-          icon={<Eye className="w-5 h-5 text-blue-600" />}
+          icon={<Eye className="w-5 h-5 text-red-700" />}
           label="Total Portal Visits"
           value={totalVisits.toLocaleString()}
-          bg="bg-blue-50"
+          bg="bg-red-50"
         />
         <StatCard
           icon={<Users className="w-5 h-5 text-violet-600" />}

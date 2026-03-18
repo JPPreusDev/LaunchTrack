@@ -1,5 +1,5 @@
 /**
- * Features page — detailed breakdown of all LaunchTrack capabilities.
+ * Features page — detailed breakdown of all Rampify capabilities.
  */
 import Link from 'next/link'
 import {
@@ -16,11 +16,11 @@ const FEATURE_GROUPS = [
     features: [
       {
         title: 'White-labeled, fully branded',
-        description: 'Clients land on your brand. Use your logo, brand colors, and custom domain. LaunchTrack is completely invisible.',
+        description: 'Clients land on your brand. Use your logo, brand colors, and custom domain. Rampify is completely invisible.',
       },
       {
         title: 'Custom subdomain & domain',
-        description: 'Get myagency.launchtrack.com automatically, or point your own domain (myagency.com) with a simple CNAME.',
+        description: 'Get myagency.rampify.com automatically, or point your own domain (myagency.com) with a simple CNAME.',
       },
       {
         title: 'Magic link access',
@@ -164,7 +164,7 @@ const FEATURE_GROUPS = [
 ]
 
 const COLOR_MAP: Record<string, { bg: string; text: string }> = {
-  blue: { bg: 'bg-blue-50', text: 'text-blue-600' },
+  blue: { bg: 'bg-red-50', text: 'text-red-700' },
   green: { bg: 'bg-green-50', text: 'text-green-600' },
   purple: { bg: 'bg-purple-50', text: 'text-purple-600' },
   amber: { bg: 'bg-amber-50', text: 'text-amber-600' },
@@ -183,7 +183,7 @@ export default function FeaturesPage() {
           Every tool your agency needs to onboard clients well
         </h1>
         <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-          From the first intake form to the CSAT survey at launch — LaunchTrack handles the full
+          From the first intake form to the CSAT survey at launch — Rampify handles the full
           onboarding lifecycle in one platform.
         </p>
       </section>
@@ -223,7 +223,7 @@ export default function FeaturesPage() {
           <p className="text-slate-400 mb-8">14-day free trial. No credit card required.</p>
           <Link
             href="/register"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2 bg-red-700 hover:bg-red-600 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
           >
             Start free trial <ArrowRight className="w-4 h-4" />
           </Link>

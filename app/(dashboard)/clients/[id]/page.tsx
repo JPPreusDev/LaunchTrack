@@ -125,7 +125,7 @@ export default async function ClientDetailPage({ params }: PageProps) {
             <div className="flex items-center gap-2 flex-wrap">
               <Link
                 href={`/projects/new?clientId=${client.id}`}
-                className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex-shrink-0"
+                className="inline-flex items-center gap-1.5 bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex-shrink-0"
               >
                 <Plus className="w-4 h-4" />
                 New Project
@@ -140,17 +140,17 @@ export default async function ClientDetailPage({ params }: PageProps) {
         <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
           <a
             href={`mailto:${client.email}`}
-            className="flex items-center gap-2.5 text-sm text-slate-600 hover:text-blue-600 group"
+            className="flex items-center gap-2.5 text-sm text-slate-600 hover:text-red-700 group"
           >
-            <Mail className="w-4 h-4 text-slate-400 group-hover:text-blue-500" />
+            <Mail className="w-4 h-4 text-slate-400 group-hover:text-red-600" />
             {client.email}
           </a>
           {client.phone && (
             <a
               href={`tel:${client.phone}`}
-              className="flex items-center gap-2.5 text-sm text-slate-600 hover:text-blue-600 group"
+              className="flex items-center gap-2.5 text-sm text-slate-600 hover:text-red-700 group"
             >
-              <Phone className="w-4 h-4 text-slate-400 group-hover:text-blue-500" />
+              <Phone className="w-4 h-4 text-slate-400 group-hover:text-red-600" />
               {client.phone}
             </a>
           )}
@@ -159,9 +159,9 @@ export default async function ClientDetailPage({ params }: PageProps) {
               href={client.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2.5 text-sm text-slate-600 hover:text-blue-600 group"
+              className="flex items-center gap-2.5 text-sm text-slate-600 hover:text-red-700 group"
             >
-              <Globe className="w-4 h-4 text-slate-400 group-hover:text-blue-500" />
+              <Globe className="w-4 h-4 text-slate-400 group-hover:text-red-600" />
               {client.website}
               <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100" />
             </a>
@@ -250,7 +250,7 @@ export default async function ClientDetailPage({ params }: PageProps) {
             {isAdmin && (
               <Link
                 href={`/projects/new?clientId=${client.id}`}
-                className="inline-flex items-center gap-1.5 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center gap-1.5 bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-800 transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 Create First Project
@@ -269,12 +269,12 @@ export default async function ClientDetailPage({ params }: PageProps) {
                 <Link
                   key={project.id}
                   href={`/projects/${project.id}`}
-                  className="block bg-white rounded-xl border border-slate-200 p-5 hover:border-blue-300 hover:shadow-sm transition-all group"
+                  className="block bg-white rounded-xl border border-slate-200 p-5 hover:border-red-400 hover:shadow-sm transition-all group"
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
-                        <h3 className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors truncate">
+                        <h3 className="font-semibold text-slate-900 group-hover:text-red-700 transition-colors truncate">
                           {project.name}
                         </h3>
                         <ProjectStatusBadge status={project.status} />
@@ -298,7 +298,7 @@ export default async function ClientDetailPage({ params }: PageProps) {
                   {total > 0 && (
                     <div className="mt-3 w-full bg-slate-100 rounded-full h-1.5">
                       <div
-                        className="bg-blue-500 h-1.5 rounded-full transition-all"
+                        className="bg-red-600 h-1.5 rounded-full transition-all"
                         style={{ width: `${pct}%` }}
                       />
                     </div>

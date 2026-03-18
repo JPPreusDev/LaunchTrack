@@ -38,7 +38,7 @@ export default async function IntakeFormPage({ params, searchParams }: PageProps
 
   const org = form.organization as unknown as { name: string; logo_url: string | null; brand_color: string } | null
   const orgName = org?.name ?? 'Your Agency'
-  const accentColor = org?.brand_color ?? '#3b82f6'
+  const accentColor = org?.brand_color ?? '#B91C1C'
 
   return (
     <div className="min-h-screen bg-slate-50">

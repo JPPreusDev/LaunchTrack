@@ -10,7 +10,6 @@ import { createClient } from '@/lib/supabase/client'
 import { toast } from 'sonner'
 
 export default function ForgotPasswordPage() {
-  const supabase = createClient()
   const [email, setEmail] = useState('')
   const [loading, setLoading] = useState(false)
   const [sent, setSent] = useState(false)
@@ -19,6 +18,7 @@ export default function ForgotPasswordPage() {
     e.preventDefault()
     setLoading(true)
 
+    const supabase = createClient()
     const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
       redirectTo: `${appUrl}/reset-password`,
@@ -40,13 +40,13 @@ export default function ForgotPasswordPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 mb-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-red-700 rounded-lg flex items-center justify-center">
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                   d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <span className="text-xl font-bold text-slate-900">LaunchTrack</span>
+            <span className="text-xl font-bold text-slate-900">Rampify</span>
           </div>
           <p className="text-slate-500 text-sm">Reset your password</p>
         </div>
@@ -63,7 +63,7 @@ export default function ForgotPasswordPage() {
               <p className="text-slate-500 text-sm mb-6">
                 If <strong>{email}</strong> has an account, you&apos;ll receive a password reset link shortly.
               </p>
-              <Link href="/login" className="text-blue-600 hover:underline text-sm font-medium">
+              <Link href="/login" className="text-red-700 hover:underline text-sm font-medium">
                 Back to sign in
               </Link>
             </div>
@@ -85,7 +85,7 @@ export default function ForgotPasswordPage() {
                     autoComplete="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700 focus:border-transparent"
                     placeholder="you@agency.com"
                   />
                 </div>
@@ -93,7 +93,7 @@ export default function ForgotPasswordPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-lg text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-red-700 hover:bg-red-800 text-white font-medium py-2.5 px-4 rounded-lg text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? 'Sending...' : 'Send reset link'}
                 </button>
@@ -101,7 +101,7 @@ export default function ForgotPasswordPage() {
 
               <p className="mt-6 text-center text-sm text-slate-500">
                 Remember your password?{' '}
-                <Link href="/login" className="text-blue-600 hover:underline font-medium">
+                <Link href="/login" className="text-red-700 hover:underline font-medium">
                   Sign in
                 </Link>
               </p>

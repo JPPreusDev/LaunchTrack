@@ -1,5 +1,5 @@
 /**
- * Integrations page — what LaunchTrack connects with.
+ * Integrations page — what Rampify connects with.
  */
 import Link from 'next/link'
 import { ArrowRight, Zap } from 'lucide-react'
@@ -32,7 +32,7 @@ const INTEGRATIONS = [
   {
     name: 'Zapier',
     category: 'Automation',
-    description: 'Connect LaunchTrack to 6,000+ apps. Trigger workflows when tasks complete or projects launch.',
+    description: 'Connect Rampify to 6,000+ apps. Trigger workflows when tasks complete or projects launch.',
     status: 'coming_soon',
   },
   {
@@ -50,7 +50,7 @@ const INTEGRATIONS = [
   {
     name: 'Webhooks',
     category: 'Developer',
-    description: 'Subscribe to any LaunchTrack event via webhooks and build your own integrations.',
+    description: 'Subscribe to any Rampify event via webhooks and build your own integrations.',
     status: 'coming_soon',
   },
 ]
@@ -63,7 +63,7 @@ export default function IntegrationsPage() {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 pt-20 pb-12 text-center">
         <h1 className="text-4xl font-extrabold text-slate-900 mb-4">Integrations</h1>
         <p className="text-slate-500 text-lg max-w-xl mx-auto">
-          LaunchTrack works with the tools your agency already uses — and a growing list of new connections coming soon.
+          Rampify works with the tools your agency already uses — and a growing list of new connections coming soon.
         </p>
       </section>
 
@@ -96,15 +96,15 @@ export default function IntegrationsPage() {
 
         {/* API note */}
         <div className="mt-12 bg-slate-50 rounded-2xl border border-slate-200 p-8 text-center">
-          <Zap className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+          <Zap className="w-8 h-8 text-red-700 mx-auto mb-4" />
           <h2 className="text-xl font-bold text-slate-900 mb-2">Need a custom integration?</h2>
           <p className="text-slate-500 mb-5 max-w-md mx-auto text-sm">
-            The LaunchTrack API (available on Scale plan) lets you build anything — push projects
+            The Rampify API (available on Scale plan) lets you build anything — push projects
             from your CRM, sync tasks to your PM tool, or automate client communications.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
+            className="inline-flex items-center gap-2 text-red-700 hover:text-red-800 font-medium text-sm transition-colors"
           >
             Talk to us about your integration needs <ArrowRight className="w-3.5 h-3.5" />
           </Link>

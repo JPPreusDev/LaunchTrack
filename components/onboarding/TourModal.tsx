@@ -25,7 +25,7 @@ export function TourModal() {
   return (
     <div className="fixed bottom-6 right-6 z-50 w-80 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden">
       {/* Header */}
-      <div className="bg-blue-600 px-5 py-4 flex items-start justify-between gap-3">
+      <div className="bg-red-700 px-5 py-4 flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="text-blue-200 text-xs font-medium mb-0.5">
             {tour.icon} {tour.title} · Step {activeTourStep + 1} of {tour.steps.length}
@@ -47,7 +47,7 @@ export function TourModal() {
           <div
             key={i}
             className={`h-1 rounded-full flex-1 transition-colors duration-300 ${
-              i <= activeTourStep ? 'bg-blue-500' : 'bg-slate-200'
+              i <= activeTourStep ? 'bg-red-600' : 'bg-slate-200'
             }`}
           />
         ))}
@@ -59,7 +59,7 @@ export function TourModal() {
         {step.actionHref && (
           <Link
             href={step.actionHref}
-            className="mt-3 inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-700 font-medium"
+            className="mt-3 inline-flex items-center gap-1 text-sm text-red-700 hover:text-red-800 font-medium"
           >
             {step.actionLabel}
             <ChevronRight className="w-3.5 h-3.5" />
@@ -89,7 +89,7 @@ export function TourModal() {
         ) : (
           <button
             onClick={nextStep}
-            className="flex items-center gap-1 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+            className="flex items-center gap-1 bg-red-700 hover:bg-red-800 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
           >
             Next
             <ChevronRight className="w-4 h-4" />

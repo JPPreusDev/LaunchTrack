@@ -13,7 +13,6 @@ import { toast } from 'sonner'
 
 export default function ResetPasswordPage() {
   const router = useRouter()
-  const supabase = createClient()
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [loading, setLoading] = useState(false)
@@ -22,13 +21,14 @@ export default function ResetPasswordPage() {
   useEffect(() => {
     // Listen for the PASSWORD_RECOVERY event — Supabase fires this when the
     // user arrives from a password reset email link.
+    const supabase = createClient()
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
       if (event === 'PASSWORD_RECOVERY') {
         setReady(true)
       }
     })
     return () => subscription.unsubscribe()
-  }, [supabase.auth])
+  }, [])
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -43,6 +43,7 @@ export default function ResetPasswordPage() {
     }
 
     setLoading(true)
+    const supabase = createClient()
     const { error } = await supabase.auth.updateUser({ password })
 
     if (error) {
@@ -63,7 +64,7 @@ export default function ResetPasswordPage() {
           <p className="text-slate-500 text-sm">Verifying your reset link…</p>
           <p className="text-slate-400 text-xs mt-2">
             If nothing happens,{' '}
-            <a href="/forgot-password" className="text-blue-600 hover:underline">
+            <a href="/forgot-password" className="text-red-700 hover:underline">
               request a new link
             </a>.
           </p>
@@ -78,13 +79,13 @@ export default function ResetPasswordPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 mb-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-red-700 rounded-lg flex items-center justify-center">
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                   d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <span className="text-xl font-bold text-slate-900">LaunchTrack</span>
+            <span className="text-xl font-bold text-slate-900">Rampify</span>
           </div>
           <p className="text-slate-500 text-sm">Set a new password</p>
         </div>
@@ -106,7 +107,7 @@ export default function ResetPasswordPage() {
                 autoComplete="new-password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700 focus:border-transparent"
                 placeholder="••••••••"
               />
             </div>
@@ -123,7 +124,7 @@ export default function ResetPasswordPage() {
                 autoComplete="new-password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700 focus:border-transparent"
                 placeholder="••••••••"
               />
             </div>
@@ -131,7 +132,7 @@ export default function ResetPasswordPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-lg text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-red-700 hover:bg-red-800 text-white font-medium py-2.5 px-4 rounded-lg text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Updating…' : 'Update password'}
             </button>

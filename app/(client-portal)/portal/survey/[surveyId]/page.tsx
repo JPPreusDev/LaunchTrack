@@ -42,7 +42,7 @@ export default async function CsatSurveyPage({ params }: PageProps) {
 
   const org = project?.organization
   const orgName = org?.name ?? 'Your Agency'
-  const accentColor = org?.brand_color ?? '#3b82f6'
+  const accentColor = org?.brand_color ?? '#B91C1C'
 
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">

@@ -52,7 +52,7 @@ export default function ContactPage() {
             {[
               {
                 title: 'Book a demo',
-                desc: 'See LaunchTrack in action with a 30-minute walkthrough tailored to your agency.',
+                desc: 'See Rampify in action with a 30-minute walkthrough tailored to your agency.',
               },
               {
                 title: 'Sales questions',
@@ -98,7 +98,7 @@ export default function ContactPage() {
                     value={form.name}
                     onChange={(e) => update('name', e.target.value)}
                     placeholder="Jane Smith"
-                    className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700"
                   />
                 </div>
                 <div>
@@ -111,7 +111,7 @@ export default function ContactPage() {
                     value={form.email}
                     onChange={(e) => update('email', e.target.value)}
                     placeholder="jane@agency.com"
-                    className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700"
                   />
                 </div>
               </div>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                     value={form.company}
                     onChange={(e) => update('company', e.target.value)}
                     placeholder="Pixel & Co."
-                    className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700"
                   />
                 </div>
                 <div>
@@ -131,7 +131,7 @@ export default function ContactPage() {
                   <select
                     value={form.team_size}
                     onChange={(e) => update('team_size', e.target.value)}
-                    className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                    className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700 bg-white"
                   >
                     <option value="">Select…</option>
                     <option value="1">Just me</option>
@@ -150,7 +150,7 @@ export default function ContactPage() {
                   onChange={(e) => update('message', e.target.value)}
                   rows={4}
                   placeholder="Tell us about your agency and what you're looking for…"
-                  className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                  className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700 resize-none"
                 />
               </div>
 
@@ -161,7 +161,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-lg text-sm disabled:opacity-50 transition-colors"
+                className="w-full bg-red-700 hover:bg-red-800 text-white font-medium py-3 rounded-lg text-sm disabled:opacity-50 transition-colors"
               >
                 {submitting ? 'Sending…' : 'Send message'}
               </button>

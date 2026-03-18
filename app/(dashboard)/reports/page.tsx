@@ -127,7 +127,7 @@ export default async function ReportsPage() {
                     <div className="flex items-center justify-end gap-2">
                       <div className="w-16 bg-slate-100 rounded-full h-1.5">
                         <div
-                          className="bg-blue-500 h-1.5 rounded-full"
+                          className="bg-red-600 h-1.5 rounded-full"
                           style={{ width: `${p.pct}%` }}
                         />
                       </div>

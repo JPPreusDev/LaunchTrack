@@ -21,13 +21,13 @@ export function OnboardingChecklist() {
   const completedCount = state.completedTours.length
 
   return (
-    <div className="bg-white rounded-xl border border-blue-200 overflow-hidden">
+    <div className="bg-white rounded-xl border border-red-300 overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-blue-50 to-white border-b border-blue-100">
         <div>
           <div className="flex items-center gap-2 mb-0.5">
             <span className="text-lg" role="img" aria-label="rocket">🚀</span>
-            <h2 className="font-semibold text-slate-900">Get Started with LaunchTrack</h2>
+            <h2 className="font-semibold text-slate-900">Get Started with Rampify</h2>
           </div>
           <p className="text-sm text-slate-500">
             {completedCount} of {TOUR_ORDER.length} steps completed
@@ -45,7 +45,7 @@ export function OnboardingChecklist() {
       {/* Progress bar */}
       <div className="h-1 bg-slate-100">
         <div
-          className="h-1 bg-blue-500 transition-all duration-500"
+          className="h-1 bg-red-600 transition-all duration-500"
           style={{ width: `${(completedCount / TOUR_ORDER.length) * 100}%` }}
         />
       </div>
@@ -82,7 +82,7 @@ export function OnboardingChecklist() {
                 <p className="text-xs text-slate-500">{tour.subtitle}</p>
               </div>
               <div className="flex items-center gap-1.5 flex-shrink-0">
-                <span className="text-xs text-blue-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-xs text-red-700 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                   {isComplete ? 'Replay' : 'Start tour'}
                 </span>
                 <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-slate-500 transition-colors" />

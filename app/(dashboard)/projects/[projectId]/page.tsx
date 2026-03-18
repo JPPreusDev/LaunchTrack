@@ -146,7 +146,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             <span className="font-bold text-slate-900">{pct}%</span>
           </div>
           <div className="w-full bg-slate-100 rounded-full h-2">
-            <div className="bg-blue-500 h-2 rounded-full transition-all duration-500" style={{ width: `${pct}%` }} />
+            <div className="bg-red-600 h-2 rounded-full transition-all duration-500" style={{ width: `${pct}%` }} />
           </div>
           <div className="flex items-center gap-4 mt-3 text-xs text-slate-500">
             <span className="flex items-center gap-1">
@@ -165,7 +165,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         {/* Engagement + CSAT strip */}
         <div className="mt-4 pt-4 border-t border-slate-100 flex items-center gap-6 text-xs text-slate-500 flex-wrap">
           <span className="flex items-center gap-1.5">
-            <Activity className="w-3.5 h-3.5 text-blue-400" />
+            <Activity className="w-3.5 h-3.5 text-red-500" />
             {lastVisitDays === null
               ? 'Client portal not visited yet'
               : lastVisitDays === 0

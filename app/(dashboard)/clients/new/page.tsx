@@ -89,7 +89,7 @@ export default function NewClientPage() {
               required
               value={form.name}
               onChange={handleChange}
-              className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
               placeholder="Mike Reynolds"
             />
           </div>
@@ -100,7 +100,7 @@ export default function NewClientPage() {
               type="text"
               value={form.companyName}
               onChange={handleChange}
-              className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
               placeholder="Brightstar Retail"
             />
           </div>
@@ -114,7 +114,7 @@ export default function NewClientPage() {
             required
             value={form.email}
             onChange={handleChange}
-            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
             placeholder="client@company.com"
           />
         </div>
@@ -127,7 +127,7 @@ export default function NewClientPage() {
               type="tel"
               value={form.phone}
               onChange={handleChange}
-              className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
               placeholder="+1 555 000 0000"
             />
           </div>
@@ -138,7 +138,7 @@ export default function NewClientPage() {
               type="url"
               value={form.website}
               onChange={handleChange}
-              className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
               placeholder="https://brightstar.com"
             />
           </div>
@@ -151,7 +151,7 @@ export default function NewClientPage() {
             value={form.notes}
             onChange={handleChange}
             rows={3}
-            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700 resize-none"
             placeholder="Key context about this client..."
           />
         </div>
@@ -160,7 +160,7 @@ export default function NewClientPage() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
+            className="bg-red-700 hover:bg-red-800 text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
           >
             {loading ? 'Saving...' : 'Add Client'}
           </button>

@@ -80,7 +80,7 @@ export default async function IntegrationsPage() {
     {
       provider: 'jira' as const,
       name: 'Jira',
-      description: 'Sync LaunchTrack tasks to Jira Cloud issues with two-way status updates.',
+      description: 'Sync Rampify tasks to Jira Cloud issues with two-way status updates.',
       logo: '🟦',
       authUrl: getJiraAuthUrl(orgId),
       features: ['Task push to Jira', 'Issue creation', 'Token auto-refresh'],
@@ -92,7 +92,7 @@ export default async function IntegrationsPage() {
       <div>
         <h1 className="text-2xl font-bold text-slate-900">Integrations</h1>
         <p className="text-slate-500 text-sm mt-0.5">
-          Connect LaunchTrack with your existing tools. LaunchTrack remains the source of truth.
+          Connect Rampify with your existing tools. Rampify remains the source of truth.
         </p>
       </div>
 
@@ -116,8 +116,8 @@ export default async function IntegrationsPage() {
         })}
       </div>
 
-      <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm text-blue-800">
-        <strong>Note:</strong> LaunchTrack is always the source of truth for onboarding timelines,
+      <div className="bg-red-50 border border-red-300 rounded-xl p-4 text-sm text-red-900">
+        <strong>Note:</strong> Rampify is always the source of truth for onboarding timelines,
         client visibility, and asset collection. External tools serve as execution mirrors only.
       </div>
     </div>

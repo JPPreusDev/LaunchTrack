@@ -58,7 +58,7 @@ function MentionText({ text }: { text: string }) {
     <>
       {parts.map((part, i) =>
         part.startsWith('@')
-          ? <span key={i} className="bg-blue-100 text-blue-700 rounded px-0.5 font-medium">{part}</span>
+          ? <span key={i} className="bg-red-100 text-red-800 rounded px-0.5 font-medium">{part}</span>
           : <span key={i}>{part}</span>
       )}
     </>
@@ -122,7 +122,7 @@ export function TaskRow({ task, projectId, showInternalNotes }: TaskRowProps) {
               className={cn(
                 'w-5 h-5',
                 status === 'completed' && 'text-green-500',
-                status === 'in_progress' && 'text-blue-500',
+                status === 'in_progress' && 'text-red-600',
                 status === 'waiting_on_client' && 'text-amber-500',
                 status === 'not_started' && 'text-slate-300'
               )}
@@ -149,7 +149,7 @@ export function TaskRow({ task, projectId, showInternalNotes }: TaskRowProps) {
 
           <div className="flex items-center gap-2 mt-1 flex-wrap">
             {task.is_client_task ? (
-              <span className="inline-flex items-center gap-1 text-xs bg-blue-50 text-blue-600 px-1.5 py-0.5 rounded font-medium">
+              <span className="inline-flex items-center gap-1 text-xs bg-red-50 text-red-700 px-1.5 py-0.5 rounded font-medium">
                 <UserCheck className="w-3 h-3" />
                 Client
               </span>

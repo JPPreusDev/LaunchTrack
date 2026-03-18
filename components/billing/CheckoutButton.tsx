@@ -41,7 +41,7 @@ export function CheckoutButton({ plan, organizationId, userEmail }: CheckoutButt
     <button
       onClick={handleCheckout}
       disabled={loading}
-      className="w-full py-2.5 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+      className="w-full py-2.5 bg-red-700 text-white rounded-lg text-sm font-medium hover:bg-red-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
     >
       {loading ? 'Redirecting...' : 'Upgrade Now'}
     </button>

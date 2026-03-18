@@ -142,7 +142,7 @@ export async function POST(request: NextRequest) {
             <p>Click the button below to access your portal. This link is valid for 24 hours.</p>
             <p style="margin-top:16px;color:#64748b;font-size:13px;">
               After your first login, you can return anytime at:<br/>
-              <a href="${portalLoginUrl}" style="color:#3b82f6;">${portalLoginUrl}</a>
+              <a href="${portalLoginUrl}" style="color:#B91C1C;">${portalLoginUrl}</a>
             </p>
           `,
           ctaLabel: 'Access My Portal',

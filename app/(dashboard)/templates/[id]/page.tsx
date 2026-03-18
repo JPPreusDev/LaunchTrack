@@ -17,7 +17,7 @@ import type { ServiceCategory, CategoryAssignment } from '@/types'
 
 // ── Colour palette for category badges (cycles by index) ──────────────
 const BADGE_COLORS = [
-  'bg-blue-100 text-blue-700',
+  'bg-red-100 text-red-800',
   'bg-violet-100 text-violet-700',
   'bg-emerald-100 text-emerald-700',
   'bg-amber-100 text-amber-700',
@@ -295,7 +295,7 @@ export default function TemplateDetailPage() {
             onClick={() => setTab(t)}
             className={`px-4 py-2 text-sm font-medium capitalize transition-colors border-b-2 -mb-px ${
               tab === t
-                ? 'border-blue-600 text-blue-600'
+                ? 'border-red-700 text-red-700'
                 : 'border-transparent text-slate-500 hover:text-slate-700'
             }`}
           >
@@ -312,7 +312,7 @@ export default function TemplateDetailPage() {
             <select
               value={filterCategory}
               onChange={(e) => setFilterCategory(e.target.value)}
-              className="px-3 py-1.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              className="px-3 py-1.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700 bg-white"
             >
               <option value="all">All categories</option>
               {categories.map((c) => (
@@ -370,7 +370,7 @@ export default function TemplateDetailPage() {
                             )}
                             <div className="flex items-center gap-3 mt-1 text-xs text-slate-400">
                               <span>Due day {task.default_due_days}</span>
-                              {task.is_client_task && <span className="text-blue-500">Client task</span>}
+                              {task.is_client_task && <span className="text-red-600">Client task</span>}
                               {task.requires_approval && <span className="text-amber-500">Needs approval</span>}
                             </div>
                           </div>
@@ -411,7 +411,7 @@ export default function TemplateDetailPage() {
                         )}
                         <div className="flex items-center gap-3 mt-1 text-xs text-slate-400">
                           <span>Due day {task.default_due_days}</span>
-                          {task.is_client_task && <span className="text-blue-500">Client task</span>}
+                          {task.is_client_task && <span className="text-red-600">Client task</span>}
                         </div>
                       </div>
                     ))}
@@ -462,12 +462,12 @@ export default function TemplateDetailPage() {
                   onChange={(e) => setNewCategoryName(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && addCategory()}
                   placeholder="Add new category..."
-                  className="flex-1 px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
                 />
                 <button
                   onClick={addCategory}
                   disabled={!newCategoryName.trim() || savingCategory}
-                  className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
+                  className="flex items-center gap-1.5 bg-red-700 hover:bg-red-800 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
                 >
                   <Plus className="w-3.5 h-3.5" /> Add
                 </button>
@@ -488,7 +488,7 @@ export default function TemplateDetailPage() {
                 <select
                   value={selectedCategoryForAssign}
                   onChange={(e) => setSelectedCategoryForAssign(e.target.value)}
-                  className="px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
                 >
                   <option value="">Select category...</option>
                   {categories.map((c) => (
@@ -498,7 +498,7 @@ export default function TemplateDetailPage() {
                 <select
                   value={selectedUserForAssign}
                   onChange={(e) => setSelectedUserForAssign(e.target.value)}
-                  className="px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
                 >
                   <option value="">Select team member...</option>
                   {members.map((m) => (
@@ -508,7 +508,7 @@ export default function TemplateDetailPage() {
                 <button
                   onClick={addAssignment}
                   disabled={!selectedCategoryForAssign || !selectedUserForAssign}
-                  className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
+                  className="flex items-center gap-1.5 bg-red-700 hover:bg-red-800 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
                 >
                   <Plus className="w-3.5 h-3.5" /> Assign
                 </button>
@@ -536,7 +536,7 @@ export default function TemplateDetailPage() {
                               title={a.notify_on_client_complete ? 'Disable email notifications' : 'Enable email notifications when client completes a task'}
                               className={`flex items-center gap-1 text-xs px-2 py-1 rounded transition-colors ${
                                 a.notify_on_client_complete
-                                  ? 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+                                  ? 'bg-red-100 text-red-800 hover:bg-red-200'
                                   : 'bg-slate-100 text-slate-400 hover:bg-slate-200'
                               }`}
                             >

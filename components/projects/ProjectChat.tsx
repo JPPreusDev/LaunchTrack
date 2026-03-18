@@ -26,7 +26,7 @@ interface ProjectChatProps {
   accentColor?: string
 }
 
-export function ProjectChat({ projectId, currentUserId, isAgencyView, accentColor = '#3b82f6' }: ProjectChatProps) {
+export function ProjectChat({ projectId, currentUserId, isAgencyView, accentColor = '#B91C1C' }: ProjectChatProps) {
   const supabase = createClient()
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
@@ -107,7 +107,7 @@ export function ProjectChat({ projectId, currentUserId, isAgencyView, accentColo
               <div key={msg.id} className={cn('flex gap-2', isMine && 'flex-row-reverse')}>
                 <div className={cn(
                   'w-7 h-7 rounded-full flex-shrink-0 flex items-center justify-center text-white text-xs font-bold',
-                  isClient ? 'bg-blue-500' : 'bg-slate-600'
+                  isClient ? 'bg-red-600' : 'bg-slate-600'
                 )}>
                   {senderName[0]?.toUpperCase()}
                 </div>
@@ -150,7 +150,7 @@ export function ProjectChat({ projectId, currentUserId, isAgencyView, accentColo
               onClick={() => setIsInternal(false)}
               className={cn(
                 'flex items-center gap-1 text-xs px-2 py-1 rounded-md transition-colors',
-                !isInternal ? 'bg-blue-50 text-blue-700 font-medium' : 'text-slate-400 hover:bg-slate-50'
+                !isInternal ? 'bg-red-50 text-red-800 font-medium' : 'text-slate-400 hover:bg-slate-50'
               )}
             >
               <Globe className="w-3 h-3" /> Client visible
@@ -171,7 +171,7 @@ export function ProjectChat({ projectId, currentUserId, isAgencyView, accentColo
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Send a message…"
-            className="flex-1 text-sm px-3 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="flex-1 text-sm px-3 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700 focus:border-transparent"
           />
           <button
             type="submit"

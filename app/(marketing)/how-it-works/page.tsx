@@ -83,7 +83,7 @@ export default function HowItWorksPage() {
   return (
     <>
       <section className="max-w-3xl mx-auto px-4 sm:px-6 pt-20 pb-12 text-center">
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-4">How LaunchTrack works</h1>
+        <h1 className="text-4xl font-extrabold text-slate-900 mb-4">How Rampify works</h1>
         <p className="text-slate-500 text-lg">
           A structured, repeatable system that gets clients from signed to live — every time.
         </p>
@@ -97,7 +97,7 @@ export default function HowItWorksPage() {
           <div className="space-y-12">
             {STEPS.map((step) => (
               <div key={step.number} className="relative flex gap-6 sm:gap-8">
-                <div className="flex-shrink-0 w-14 h-14 bg-blue-600 rounded-full text-white font-bold text-sm flex items-center justify-center z-10">
+                <div className="flex-shrink-0 w-14 h-14 bg-red-700 rounded-full text-white font-bold text-sm flex items-center justify-center z-10">
                   {step.number}
                 </div>
                 <div className="flex-1 pt-3">
@@ -117,8 +117,8 @@ export default function HowItWorksPage() {
           </div>
         </div>
 
-        <div className="mt-16 bg-blue-600 rounded-2xl p-10 text-center text-white">
-          <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+        <div className="mt-16 bg-red-700 rounded-2xl p-10 text-center text-white">
+          <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mx-auto mb-4">
             <Zap className="w-6 h-6 text-white" />
           </div>
           <h2 className="text-2xl font-bold mb-3">See it for yourself</h2>
@@ -127,7 +127,7 @@ export default function HowItWorksPage() {
           </p>
           <Link
             href="/register"
-            className="inline-flex items-center gap-2 bg-white text-blue-700 font-semibold px-7 py-3 rounded-xl hover:bg-blue-50 transition-colors"
+            className="inline-flex items-center gap-2 bg-white text-red-800 font-semibold px-7 py-3 rounded-xl hover:bg-red-50 transition-colors"
           >
             Start free trial <ArrowRight className="w-4 h-4" />
           </Link>

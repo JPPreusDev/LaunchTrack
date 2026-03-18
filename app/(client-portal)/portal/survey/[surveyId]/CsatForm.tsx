@@ -96,7 +96,7 @@ export function CsatForm({ surveyId, projectId, accentColor }: CsatFormProps) {
           onChange={(e) => setComment(e.target.value)}
           rows={3}
           placeholder="Tell us more about your experience…"
-          className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+          className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700 resize-none"
         />
       </div>
 

@@ -1,6 +1,6 @@
 /**
  * Client portal dashboard — lists all projects the logged-in client has access to.
- * White-labeled with agency branding. No LaunchTrack branding.
+ * White-labeled with agency branding. No Rampify branding.
  */
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
@@ -59,7 +59,7 @@ export default async function PortalDashboardPage() {
   const org = profile.organization as unknown as {
     name: string; logo_url: string | null; brand_color: string; portal_tagline: string | null
   }
-  const accentColor = org?.brand_color ?? '#3b82f6'
+  const accentColor = org?.brand_color ?? '#B91C1C'
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -119,7 +119,7 @@ export default async function PortalDashboardPage() {
 
               const statusConfig = {
                 completed: { icon: CheckCircle2, label: 'Completed', color: 'text-green-600' },
-                in_progress: { icon: Clock, label: 'In Progress', color: 'text-blue-600' },
+                in_progress: { icon: Clock, label: 'In Progress', color: 'text-red-700' },
                 waiting_on_client: { icon: AlertCircle, label: 'Needs Your Input', color: 'text-amber-600' },
                 not_started: { icon: Clock, label: 'Not Started', color: 'text-slate-500' },
                 on_hold: { icon: AlertCircle, label: 'On Hold', color: 'text-slate-500' },
@@ -136,7 +136,7 @@ export default async function PortalDashboardPage() {
                 >
                   <div className="flex items-start justify-between gap-3 mb-4">
                     <div>
-                      <h2 className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
+                      <h2 className="font-semibold text-slate-900 group-hover:text-red-700 transition-colors">
                         {project.name}
                       </h2>
                       {project.estimated_launch_date && (

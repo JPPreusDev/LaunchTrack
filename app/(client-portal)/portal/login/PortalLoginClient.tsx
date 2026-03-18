@@ -90,7 +90,7 @@ export function PortalLoginClient({ orgSlug }: PortalLoginClientProps) {
     router.refresh()
   }
 
-  const accentColor = branding?.brand_color ?? '#3b82f6'
+  const accentColor = branding?.brand_color ?? '#B91C1C'
 
   if (loadingBranding) {
     return (
@@ -194,7 +194,7 @@ export function PortalLoginClient({ orgSlug }: PortalLoginClientProps) {
           </div>
         </div>
 
-        {/* No LaunchTrack branding here */}
+        {/* No Rampify branding here */}
       </div>
     </div>
   )

@@ -15,7 +15,7 @@ import {
 import Link from 'next/link'
 
 const PRESET_COLORS = [
-  '#3b82f6', '#8b5cf6', '#10b981', '#f59e0b',
+  '#B91C1C', '#8b5cf6', '#10b981', '#f59e0b',
   '#ef4444', '#ec4899', '#06b6d4', '#64748b',
 ]
 
@@ -52,7 +52,7 @@ export default function PortalSettingsPage() {
   const [copiedSubdomain, setCopiedSubdomain] = useState(false)
 
   // Branding state
-  const [brandColor, setBrandColor] = useState('#3b82f6')
+  const [brandColor, setBrandColor] = useState('#B91C1C')
   const [tagline, setTagline] = useState('')
 
   // Custom domain state
@@ -83,7 +83,7 @@ export default function PortalSettingsPage() {
 
       const orgData = profile.organization as unknown as OrgData
       setOrg(orgData)
-      setBrandColor(orgData.brand_color ?? '#3b82f6')
+      setBrandColor(orgData.brand_color ?? '#B91C1C')
       setTagline(orgData.portal_tagline ?? '')
       setSavedCustomDomain(orgData.custom_domain)
       setCustomDomain(orgData.custom_domain ?? '')
@@ -194,7 +194,7 @@ export default function PortalSettingsPage() {
           </p>
           <Link
             href="/billing"
-            className="inline-flex items-center gap-1.5 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center gap-1.5 bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-800 transition-colors"
           >
             Upgrade Plan
           </Link>
@@ -215,7 +215,7 @@ export default function PortalSettingsPage() {
       <div>
         <h1 className="text-2xl font-bold text-slate-900">Client Portal</h1>
         <p className="text-slate-500 text-sm mt-0.5">
-          White-labeled login portal for your clients — no LaunchTrack branding.
+          White-labeled login portal for your clients — no Rampify branding.
         </p>
       </div>
 
@@ -295,12 +295,12 @@ export default function PortalSettingsPage() {
             value={customDomain}
             onChange={(e) => setCustomDomain(e.target.value)}
             placeholder="portal.yourdomain.com"
-            className="flex-1 px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono"
+            className="flex-1 px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700 focus:border-transparent font-mono"
           />
           <button
             onClick={handleSaveDomain}
             disabled={savingDomain}
-            className="flex-shrink-0 inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-colors"
+            className="flex-shrink-0 inline-flex items-center gap-1.5 bg-red-700 hover:bg-red-800 disabled:opacity-50 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-colors"
           >
             {savingDomain ? 'Saving...' : 'Save'}
           </button>
@@ -314,7 +314,7 @@ export default function PortalSettingsPage() {
 
               <div>
                 <p className="text-xs font-medium text-slate-500 uppercase tracking-wide mb-1.5">
-                  Step 1 — CNAME record (point domain to LaunchTrack)
+                  Step 1 — CNAME record (point domain to Rampify)
                 </p>
                 <div className="grid grid-cols-2 gap-2 text-xs font-mono">
                   <div>
@@ -340,13 +340,13 @@ export default function PortalSettingsPage() {
                   <div>
                     <span className="text-slate-400">Host</span>
                     <div className="mt-0.5 bg-white border border-slate-200 rounded px-2 py-1 truncate">
-                      _launchtrack.{savedCustomDomain}
+                      _rampify.{savedCustomDomain}
                     </div>
                   </div>
                   <div>
                     <span className="text-slate-400">Value</span>
                     <div className="mt-0.5 bg-white border border-slate-200 rounded px-2 py-1 truncate">
-                      launchtrack-verify={verifyToken}
+                      rampify-verify={verifyToken}
                     </div>
                   </div>
                 </div>
@@ -446,7 +446,7 @@ export default function PortalSettingsPage() {
               onChange={(e) => setTagline(e.target.value)}
               placeholder="e.g. Track your project with us"
               maxLength={120}
-              className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700 focus:border-transparent"
             />
             <p className="text-xs text-slate-400 mt-1">
               Shown on the login page below your agency name.
@@ -456,7 +456,7 @@ export default function PortalSettingsPage() {
           <button
             onClick={handleSave}
             disabled={saving}
-            className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+            className="inline-flex items-center gap-1.5 bg-red-700 hover:bg-red-800 disabled:opacity-50 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
           >
             {saving ? 'Saving...' : 'Save Branding'}
           </button>

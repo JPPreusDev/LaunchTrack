@@ -97,9 +97,9 @@ export default async function BillingPage() {
         <div className="flex items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <Zap className="w-5 h-5 text-blue-600" />
+              <Zap className="w-5 h-5 text-red-700" />
               <h2 className="font-semibold text-slate-900">
-                Current Plan: <span className="text-blue-600 capitalize">{currentPlan}</span>
+                Current Plan: <span className="text-red-700 capitalize">{currentPlan}</span>
               </h2>
             </div>
             <p className="text-sm text-slate-500">
@@ -132,13 +132,13 @@ export default async function BillingPage() {
               key={plan.key}
               className={`bg-white rounded-xl border-2 p-6 relative ${
                 plan.popular
-                  ? 'border-blue-500 shadow-lg'
+                  ? 'border-red-600 shadow-lg'
                   : 'border-slate-200'
               }`}
             >
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  <span className="bg-red-700 text-white text-xs font-semibold px-3 py-1 rounded-full">
                     Most Popular
                   </span>
                 </div>

@@ -113,7 +113,7 @@ export function ClientAssetList({ assets, projectId, organizationId }: ClientAss
                   Approved
                 </div>
               ) : status === 'submitted' ? (
-                <div className="flex items-center gap-1 text-xs text-blue-600 font-medium">
+                <div className="flex items-center gap-1 text-xs text-red-700 font-medium">
                   <Clock className="w-4 h-4" />
                   Under review
                 </div>
@@ -128,7 +128,7 @@ export function ClientAssetList({ assets, projectId, organizationId }: ClientAss
                       if (file) handleUpload(asset.id, file)
                     }}
                   />
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white text-xs font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-700 text-white text-xs font-medium rounded-lg hover:bg-red-800 transition-colors">
                     <Upload className="w-3.5 h-3.5" />
                     {isUploading ? 'Uploading...' : 'Upload'}
                   </span>

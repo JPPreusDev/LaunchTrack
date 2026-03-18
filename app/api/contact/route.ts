@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
 
   // Send via Resend if configured
   const resendKey = process.env.RESEND_API_KEY
-  const fromEmail = process.env.RESEND_FROM_EMAIL ?? 'noreply@launchtrack.com'
+  const fromEmail = process.env.RESEND_FROM_EMAIL ?? 'noreply@rampify.com'
   const toEmail = process.env.CONTACT_TO_EMAIL ?? fromEmail
 
   if (resendKey && resendKey !== 're_...') {

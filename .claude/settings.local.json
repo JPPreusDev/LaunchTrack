@@ -17,7 +17,17 @@
       "Bash(caddy version:*)",
       "Bash(cd \"C:\\\\Users\\\\Dell\\\\Downloads\\\\Claude Project\\\\onboarding\\\\launchtrack\" && caddy run 2>&1)",
       "Bash(cd \"C:\\\\Users\\\\Dell\\\\Downloads\\\\Claude Project\\\\onboarding\\\\launchtrack\" && caddy.exe run 2>&1)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(supabase start:*)",
+      "Bash(npx supabase:*)",
+      "Bash(npx vercel:*)",
+      "Bash(npx tsc:*)",
+      "Bash(vercel deploy:*)",
+      "Bash(grep -l \"dynamic\" \"C:\\\\Users\\\\Dell\\\\Downloads\\\\Claude Project\\\\onboarding\\\\launchtrack\\\\app\\\\\\(auth\\)\"/*.tsx \"C:\\\\Users\\\\Dell\\\\Downloads\\\\Claude Project\\\\onboarding\\\\launchtrack\\\\app\\\\\\(auth\\)\"/*/*.tsx)",
+      "WebFetch(domain:launchtrack-seven.vercel.app)",
+      "Bash(npm i:*)",
+      "Bash(sed:*)",
+      "Bash(npx skills:*)"
     ]
   }
 }

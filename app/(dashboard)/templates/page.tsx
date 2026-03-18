@@ -43,7 +43,7 @@ export default async function TemplatesPage() {
         </div>
         <Link
           href="/templates/new"
-          className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+          className="inline-flex items-center gap-1.5 bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
         >
           <Plus className="w-4 h-4" />
           New Template
@@ -59,7 +59,7 @@ export default async function TemplatesPage() {
           </p>
           <Link
             href="/templates/new"
-            className="inline-flex items-center gap-1.5 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center gap-1.5 bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-800 transition-colors"
           >
             <Plus className="w-4 h-4" />
             Create Template
@@ -79,10 +79,10 @@ export default async function TemplatesPage() {
               <Link
                 key={t.id}
                 href={`/templates/${t.id}`}
-                className="bg-white rounded-xl border border-slate-200 p-5 flex items-center gap-4 hover:border-blue-300 hover:shadow-sm transition-all group"
+                className="bg-white rounded-xl border border-slate-200 p-5 flex items-center gap-4 hover:border-red-400 hover:shadow-sm transition-all group"
               >
-                <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <LayoutTemplate className="w-5 h-5 text-blue-600" />
+                <div className="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <LayoutTemplate className="w-5 h-5 text-red-700" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">

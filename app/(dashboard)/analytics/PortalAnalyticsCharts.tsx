@@ -19,7 +19,7 @@ import {
   Legend,
 } from 'recharts'
 
-const COLORS = ['#3b82f6', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444', '#06b6d4']
+const COLORS = ['#B91C1C', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444', '#06b6d4']
 
 interface DailyDataPoint {
   date: string
@@ -86,7 +86,7 @@ export function PortalAnalyticsCharts({ dailyData, topClientsData, activityBreak
               <Line
                 type="monotone"
                 dataKey="visits"
-                stroke="#3b82f6"
+                stroke="#B91C1C"
                 strokeWidth={2}
                 dot={false}
                 activeDot={{ r: 4 }}

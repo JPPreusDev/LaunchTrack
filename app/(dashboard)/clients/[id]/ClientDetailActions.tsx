@@ -122,7 +122,7 @@ export function ClientDetailActions({ client }: Props) {
                   required
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
                 />
               </div>
               <div>
@@ -131,7 +131,7 @@ export function ClientDetailActions({ client }: Props) {
                   type="text"
                   value={form.company_name}
                   onChange={(e) => setForm({ ...form, company_name: e.target.value })}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
                 />
               </div>
             </div>
@@ -143,7 +143,7 @@ export function ClientDetailActions({ client }: Props) {
                   required
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
                 />
               </div>
               <div>
@@ -152,7 +152,7 @@ export function ClientDetailActions({ client }: Props) {
                   type="tel"
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
                 />
               </div>
             </div>
@@ -163,7 +163,7 @@ export function ClientDetailActions({ client }: Props) {
                 value={form.website}
                 onChange={(e) => setForm({ ...form, website: e.target.value })}
                 placeholder="https://"
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
               />
             </div>
             <div>
@@ -172,7 +172,7 @@ export function ClientDetailActions({ client }: Props) {
                 rows={3}
                 value={form.notes}
                 onChange={(e) => setForm({ ...form, notes: e.target.value })}
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700 resize-none"
               />
             </div>
           </div>
@@ -187,7 +187,7 @@ export function ClientDetailActions({ client }: Props) {
             <button
               onClick={handleSave}
               disabled={saving}
-              className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium disabled:opacity-50"
+              className="inline-flex items-center gap-1.5 bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded-lg text-sm font-medium disabled:opacity-50"
             >
               <Check className="w-4 h-4" />
               {saving ? 'Saving…' : 'Save Changes'}

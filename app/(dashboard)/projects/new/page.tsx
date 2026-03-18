@@ -203,7 +203,7 @@ export default function NewProjectPage() {
             required
             value={form.name}
             onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
-            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
             placeholder="Brightstar Website Launch"
           />
         </div>
@@ -214,7 +214,7 @@ export default function NewProjectPage() {
             required
             value={form.clientId}
             onChange={(e) => setForm((p) => ({ ...p, clientId: e.target.value }))}
-            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
           >
             <option value="">Select a client...</option>
             {clients.map((c) => (
@@ -226,7 +226,7 @@ export default function NewProjectPage() {
           {clients.length === 0 && (
             <p className="text-xs text-slate-400 mt-1">
               No clients yet.{' '}
-              <Link href="/clients/new" className="text-blue-600 hover:underline">Add one first</Link>.
+              <Link href="/clients/new" className="text-red-700 hover:underline">Add one first</Link>.
             </p>
           )}
         </div>
@@ -236,7 +236,7 @@ export default function NewProjectPage() {
           <select
             value={form.templateId}
             onChange={(e) => setForm((p) => ({ ...p, templateId: e.target.value }))}
-            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
           >
             <option value="">Start blank (no template)</option>
             {templates.map((t) => (
@@ -254,7 +254,7 @@ export default function NewProjectPage() {
             required
             value={form.startDate}
             onChange={(e) => setForm((p) => ({ ...p, startDate: e.target.value }))}
-            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700"
           />
         </div>
 
@@ -264,7 +264,7 @@ export default function NewProjectPage() {
             value={form.description}
             onChange={(e) => setForm((p) => ({ ...p, description: e.target.value }))}
             rows={3}
-            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-700 resize-none"
             placeholder="Brief project notes..."
           />
         </div>
@@ -273,7 +273,7 @@ export default function NewProjectPage() {
           <button
             type="submit"
             disabled={loading || !planLimit.canCreate}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-red-700 hover:bg-red-800 text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? 'Creating...' : 'Create Project'}
           </button>

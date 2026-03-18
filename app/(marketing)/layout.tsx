@@ -40,10 +40,10 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-bold text-slate-900">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-red-700 rounded-lg flex items-center justify-center">
               <Zap className="w-4 h-4 text-white" />
             </div>
-            LaunchTrack
+            Rampify
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -67,7 +67,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
             </Link>
             <Link
               href="/register"
-              className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+              className="bg-red-700 hover:bg-red-800 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
             >
               Start free trial
             </Link>
@@ -85,10 +85,10 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-7 h-7 bg-blue-500 rounded-lg flex items-center justify-center">
+                <div className="w-7 h-7 bg-red-600 rounded-lg flex items-center justify-center">
                   <Zap className="w-3.5 h-3.5 text-white" />
                 </div>
-                <span className="font-bold text-white">LaunchTrack</span>
+                <span className="font-bold text-white">Rampify</span>
               </div>
               <p className="text-sm leading-relaxed">
                 The client onboarding platform that gets your projects from signed to live — faster.
@@ -112,7 +112,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
           </div>
 
           <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-            <p>© {new Date().getFullYear()} LaunchTrack. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Rampify. All rights reserved.</p>
             <div className="flex items-center gap-4">
               <Link href="/legal/privacy" className="hover:text-white transition-colors">Privacy</Link>
               <Link href="/legal/terms" className="hover:text-white transition-colors">Terms</Link>

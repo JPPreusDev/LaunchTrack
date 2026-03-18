@@ -1,5 +1,5 @@
 /**
- * Tour step definitions for the LaunchTrack onboarding guide.
+ * Tour step definitions for the Rampify onboarding guide.
  * Three separate tours: Template, Client, and Project creation.
  */
 
@@ -113,7 +113,7 @@ export const TOURS: Record<TourId, TourDefinition> = {
       {
         title: 'Create a new project',
         description:
-          'Click "New Project". Select the client, choose a template, and set a start date. LaunchTrack will automatically generate all phases and tasks from your template.',
+          'Click "New Project". Select the client, choose a template, and set a start date. Rampify will automatically generate all phases and tasks from your template.',
         actionLabel: 'New Project',
         actionHref: '/projects/new',
       },

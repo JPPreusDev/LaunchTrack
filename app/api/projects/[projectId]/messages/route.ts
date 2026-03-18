@@ -113,7 +113,7 @@ export async function POST(request: NextRequest, { params }: Params) {
         blocks: [
           {
             type: 'header',
-            text: { type: 'plain_text', text: '💬 New Client Message — LaunchTrack' },
+            text: { type: 'plain_text', text: '💬 New Client Message — Rampify' },
           },
           {
             type: 'section',

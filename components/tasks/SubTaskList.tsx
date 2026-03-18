@@ -78,7 +78,7 @@ export function SubTaskList({ parentTaskId }: SubTaskListProps) {
         </span>
         <button
           onClick={() => setAdding(true)}
-          className="text-xs text-blue-600 hover:underline flex items-center gap-0.5"
+          className="text-xs text-red-700 hover:underline flex items-center gap-0.5"
         >
           <Plus className="w-3 h-3" /> Add
         </button>
@@ -110,12 +110,12 @@ export function SubTaskList({ parentTaskId }: SubTaskListProps) {
             value={newTitle}
             onChange={(e) => setNewTitle(e.target.value)}
             placeholder="Sub-task title"
-            className="flex-1 text-sm px-2 py-1.5 border border-slate-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="flex-1 text-sm px-2 py-1.5 border border-slate-200 rounded-md focus:outline-none focus:ring-1 focus:ring-red-700"
           />
           <button
             type="submit"
             disabled={saving || !newTitle.trim()}
-            className="text-xs bg-blue-600 text-white px-2.5 py-1.5 rounded-md disabled:opacity-50"
+            className="text-xs bg-red-700 text-white px-2.5 py-1.5 rounded-md disabled:opacity-50"
           >
             Add
           </button>

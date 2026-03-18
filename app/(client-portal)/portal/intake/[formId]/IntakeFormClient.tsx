@@ -91,7 +91,7 @@ export function IntakeFormClient({ formId, projectId, fields, accentColor }: Int
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Jane Smith"
-            className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700"
           />
         </div>
         <div>
@@ -104,7 +104,7 @@ export function IntakeFormClient({ formId, projectId, fields, accentColor }: Int
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="jane@company.com"
-            className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700"
           />
         </div>
       </div>
@@ -124,14 +124,14 @@ export function IntakeFormClient({ formId, projectId, fields, accentColor }: Int
               onChange={(e) => set(field.id, e.target.value)}
               placeholder={field.placeholder ?? ''}
               rows={4}
-              className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+              className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700 resize-none"
             />
           ) : field.field_type === 'select' ? (
             <select
               required={field.is_required}
               value={values[field.id] ?? ''}
               onChange={(e) => set(field.id, e.target.value)}
-              className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700 bg-white"
             >
               <option value="">Select an option…</option>
               {(field.options ?? []).map((opt) => (
@@ -155,7 +155,7 @@ export function IntakeFormClient({ formId, projectId, fields, accentColor }: Int
               value={values[field.id] ?? ''}
               onChange={(e) => set(field.id, e.target.value)}
               placeholder={field.placeholder ?? ''}
-              className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full text-sm px-3 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-700"
             />
           )}
         </div>

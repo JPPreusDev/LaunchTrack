@@ -191,11 +191,11 @@ export async function updateMondayItemStatus(
 }
 
 /**
- * Sync a LaunchTrack project to a Monday.com board.
+ * Sync a Rampify project to a Monday.com board.
  */
 export async function syncProjectToMonday(
   organizationId: string,
-  launchtrackProjectId: string,
+  rampifyProjectId: string,
   mondayBoardId: string
 ): Promise<void> {
   const supabase = createServiceClient()
@@ -203,7 +203,7 @@ export async function syncProjectToMonday(
   const { data: phases } = await supabase
     .from('project_phases')
     .select('*, tasks(*)')
-    .eq('project_id', launchtrackProjectId)
+    .eq('project_id', rampifyProjectId)
     .order('sort_order')
 
   if (!phases) return
@@ -224,11 +224,11 @@ export async function syncProjectToMonday(
       await supabase.from('integration_mappings').insert({
         organization_id: organizationId,
         provider: 'monday',
-        launchtrack_project_id: launchtrackProjectId,
+        rampify_project_id: rampifyProjectId,
         external_project_id: itemId,
         mapping_type: 'task',
         metadata: {
-          launchtrack_task_id: task.id,
+          rampify_task_id: task.id,
           board_id: mondayBoardId,
           group_id: groupId,
         },

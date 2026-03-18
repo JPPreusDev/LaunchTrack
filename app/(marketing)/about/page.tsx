@@ -13,12 +13,12 @@ const VALUES = [
   {
     title: 'Invisible technology',
     description:
-      'The best tool is one your clients never know is there. LaunchTrack hides behind your brand, so you get the credit for a seamless experience.',
+      'The best tool is one your clients never know is there. Rampify hides behind your brand, so you get the credit for a seamless experience.',
   },
   {
     title: 'Simplicity over complexity',
     description:
-      'We say no to feature bloat. Every addition to LaunchTrack must make onboarding simpler — for you or for your clients.',
+      'We say no to feature bloat. Every addition to Rampify must make onboarding simpler — for you or for your clients.',
   },
   {
     title: 'Transparency',
@@ -36,16 +36,16 @@ export default function AboutPage() {
             We built the tool we always wanted
           </h1>
           <p className="text-lg text-slate-600 leading-relaxed mb-4">
-            LaunchTrack started because client onboarding was broken. Projects stalled waiting on
+            Rampify started because client onboarding was broken. Projects stalled waiting on
             assets. Clients didn't know what to do next. Teams sent the same follow-up emails every
             week. Everyone was frustrated.
           </p>
           <p className="text-lg text-slate-600 leading-relaxed mb-4">
-            We built LaunchTrack to give agencies a repeatable, professional system — and to give
+            We built Rampify to give agencies a repeatable, professional system — and to give
             clients a clear, branded window into their project.
           </p>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Today, hundreds of agencies use LaunchTrack to cut their average onboarding time,
+            Today, hundreds of agencies use Rampify to cut their average onboarding time,
             improve client satisfaction scores, and stop losing time to admin work.
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function AboutPage() {
             { number: '3 weeks', label: 'Average time saved per project' },
           ].map((stat) => (
             <div key={stat.label}>
-              <p className="text-4xl font-extrabold text-blue-600 mb-2">{stat.number}</p>
+              <p className="text-4xl font-extrabold text-red-700 mb-2">{stat.number}</p>
               <p className="text-sm text-slate-500">{stat.label}</p>
             </div>
           ))}
@@ -86,7 +86,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="bg-slate-900 text-white py-20 text-center">
         <div className="max-w-2xl mx-auto px-4">
-          <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+          <div className="w-12 h-12 bg-red-700 rounded-xl flex items-center justify-center mx-auto mb-6">
             <Zap className="w-6 h-6 text-white" />
           </div>
           <h2 className="text-3xl font-bold mb-4">Join 500+ agencies</h2>
@@ -96,7 +96,7 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/register"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 bg-red-700 hover:bg-red-600 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
             >
               Start free trial <ArrowRight className="w-4 h-4" />
             </Link>

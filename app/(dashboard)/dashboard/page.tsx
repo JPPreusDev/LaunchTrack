@@ -78,7 +78,7 @@ export default async function DashboardPage() {
         {profile.role === 'org_admin' && (
           <Link
             href="/projects/new"
-            className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+            className="inline-flex items-center gap-1.5 bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
           >
             <Plus className="w-4 h-4" />
             New Project
@@ -91,7 +91,7 @@ export default async function DashboardPage() {
         <KPICard
           label="Active Projects"
           value={totalActive}
-          icon={<TrendingUp className="w-5 h-5 text-blue-500" />}
+          icon={<TrendingUp className="w-5 h-5 text-red-600" />}
           color="blue"
         />
         <KPICard
@@ -124,7 +124,7 @@ export default async function DashboardPage() {
           <div className="py-16 text-center">
             <p className="text-slate-400 text-sm">No active projects yet.</p>
             {profile.role === 'org_admin' && (
-              <Link href="/projects/new" className="mt-3 inline-block text-blue-600 text-sm hover:underline">
+              <Link href="/projects/new" className="mt-3 inline-block text-red-700 text-sm hover:underline">
                 Create your first project →
               </Link>
             )}
@@ -155,7 +155,7 @@ export default async function DashboardPage() {
                       </p>
                     </td>
                     <td className="px-6 py-4">
-                      <Link href={`/projects/${p.id}`} className="font-medium text-blue-600 hover:underline">
+                      <Link href={`/projects/${p.id}`} className="font-medium text-red-700 hover:underline">
                         {p.name}
                       </Link>
                     </td>
@@ -168,7 +168,7 @@ export default async function DashboardPage() {
                       <div className="flex items-center gap-2">
                         <div className="flex-1 bg-slate-100 rounded-full h-1.5 min-w-[80px]">
                           <div
-                            className="bg-blue-500 h-1.5 rounded-full transition-all"
+                            className="bg-red-600 h-1.5 rounded-full transition-all"
                             style={{ width: `${p.pct}%` }}
                           />
                         </div>
@@ -218,7 +218,7 @@ function KPICard({
   color: 'blue' | 'amber' | 'red' | 'green'
 }) {
   const bg = {
-    blue: 'bg-blue-50',
+    blue: 'bg-red-50',
     amber: 'bg-amber-50',
     red: 'bg-red-50',
     green: 'bg-green-50',

@@ -11,8 +11,8 @@ export default function TermsPage() {
         <div>
           <h2 className="text-lg font-semibold text-slate-900 mb-2">1. Acceptance of terms</h2>
           <p className="text-slate-600">
-            By accessing or using LaunchTrack, you agree to be bound by these Terms of Service.
-            If you do not agree, do not use LaunchTrack.
+            By accessing or using Rampify, you agree to be bound by these Terms of Service.
+            If you do not agree, do not use Rampify.
           </p>
         </div>
 
@@ -29,7 +29,7 @@ export default function TermsPage() {
           <h2 className="text-lg font-semibold text-slate-900 mb-2">3. Acceptable use</h2>
           <p className="text-slate-600 mb-2">You agree not to:</p>
           <ul className="list-disc pl-5 space-y-1 text-slate-600">
-            <li>Use LaunchTrack for any unlawful purpose</li>
+            <li>Use Rampify for any unlawful purpose</li>
             <li>Attempt to gain unauthorized access to any part of the service</li>
             <li>Interfere with or disrupt the integrity or performance of the service</li>
             <li>Upload content that infringes on intellectual property rights</li>
@@ -48,9 +48,9 @@ export default function TermsPage() {
         <div>
           <h2 className="text-lg font-semibold text-slate-900 mb-2">5. Data and privacy</h2>
           <p className="text-slate-600">
-            Your use of LaunchTrack is also governed by our{' '}
-            <a href="/legal/privacy" className="text-blue-600 hover:underline">Privacy Policy</a>.
-            You retain ownership of all data you upload or create within LaunchTrack.
+            Your use of Rampify is also governed by our{' '}
+            <a href="/legal/privacy" className="text-red-700 hover:underline">Privacy Policy</a>.
+            You retain ownership of all data you upload or create within Rampify.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export default function TermsPage() {
         <div>
           <h2 className="text-lg font-semibold text-slate-900 mb-2">7. Limitation of liability</h2>
           <p className="text-slate-600">
-            To the maximum extent permitted by law, LaunchTrack&apos;s liability for any claim
+            To the maximum extent permitted by law, Rampify&apos;s liability for any claim
             arising from your use of the service is limited to the amount you paid in the 12
             months preceding the claim.
           </p>
@@ -83,8 +83,8 @@ export default function TermsPage() {
           <h2 className="text-lg font-semibold text-slate-900 mb-2">9. Contact</h2>
           <p className="text-slate-600">
             For questions about these terms, contact us at{' '}
-            <a href="mailto:legal@launchtrack.com" className="text-blue-600 hover:underline">
-              legal@launchtrack.com
+            <a href="mailto:legal@rampify.com" className="text-red-700 hover:underline">
+              legal@rampify.com
             </a>.
           </p>
         </div>

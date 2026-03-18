@@ -156,7 +156,7 @@ export async function sendAssetReminderEmail(
       heading: 'Asset upload reminder',
       body: `
         <p>We're still waiting on the following asset to continue your project <strong>${params.projectName}</strong>:</p>
-        <p style="padding:12px 16px;background:#f8fafc;border-left:3px solid #3b82f6;border-radius:4px;">
+        <p style="padding:12px 16px;background:#f8fafc;border-left:3px solid #B91C1C;border-radius:4px;">
           <strong>${params.assetTitle}</strong>
         </p>
         <p>Please log into your project portal to upload this asset. If you have any questions, reply to this email.</p>

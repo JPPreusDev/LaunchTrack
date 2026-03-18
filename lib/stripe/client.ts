@@ -1,5 +1,5 @@
 /**
- * Stripe client and helpers for LaunchTrack billing.
+ * Stripe client and helpers for Rampify billing.
  */
 import Stripe from 'stripe'
 import { type SubscriptionPlan } from '@/types'

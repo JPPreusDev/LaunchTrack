@@ -11,7 +11,7 @@ const FEATURES = [
   {
     icon: Zap,
     title: 'White-labeled client portal',
-    description: 'Your brand, your domain. Clients see your logo — LaunchTrack stays invisible.',
+    description: 'Your brand, your domain. Clients see your logo — Rampify stays invisible.',
   },
   {
     icon: CheckCircle2,
@@ -42,7 +42,7 @@ const FEATURES = [
 
 const TESTIMONIALS = [
   {
-    quote: 'LaunchTrack cut our average onboarding time from 6 weeks to 3. Clients actually know what to do next.',
+    quote: 'Rampify cut our average onboarding time from 6 weeks to 3. Clients actually know what to do next.',
     name: 'Sarah Chen',
     role: 'Operations Director, Pixel & Co.',
     score: 5,
@@ -68,23 +68,23 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-800 text-white">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/40 via-transparent to-transparent" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-32 text-center">
-          <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-medium px-3 py-1.5 rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 bg-red-600/20 border border-blue-400/30 text-red-400 text-xs font-medium px-3 py-1.5 rounded-full mb-6">
             <Zap className="w-3 h-3" />
             Built for agencies. Loved by clients.
           </div>
           <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
             Onboard clients
             <br />
-            <span className="text-blue-400">in half the time</span>
+            <span className="text-red-500">in half the time</span>
           </h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-            LaunchTrack gives your agency a white-labeled client portal, structured onboarding phases,
+            Rampify gives your agency a white-labeled client portal, structured onboarding phases,
             real-time chat, and CSAT — so you can get from signed to launched faster.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/register"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors text-base"
+              className="inline-flex items-center gap-2 bg-red-700 hover:bg-red-600 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors text-base"
             >
               Start free trial
               <ArrowRight className="w-4 h-4" />
@@ -117,15 +117,15 @@ export default function HomePage() {
             Everything your team needs to deliver great onboarding
           </h2>
           <p className="text-slate-500 max-w-xl mx-auto">
-            From intake form to live launch — LaunchTrack keeps clients informed, assets collected,
+            From intake form to live launch — Rampify keeps clients informed, assets collected,
             and your team on track.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {FEATURES.map((f) => (
             <div key={f.title} className="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-sm transition-shadow">
-              <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-                <f.icon className="w-5 h-5 text-blue-600" />
+              <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center mb-4">
+                <f.icon className="w-5 h-5 text-red-700" />
               </div>
               <h3 className="font-semibold text-slate-900 mb-2">{f.title}</h3>
               <p className="text-sm text-slate-500 leading-relaxed">{f.description}</p>
@@ -133,7 +133,7 @@ export default function HomePage() {
           ))}
         </div>
         <div className="text-center mt-10">
-          <Link href="/features" className="text-blue-600 hover:text-blue-700 text-sm font-medium inline-flex items-center gap-1">
+          <Link href="/features" className="text-red-700 hover:text-red-800 text-sm font-medium inline-flex items-center gap-1">
             View all features <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
@@ -143,7 +143,7 @@ export default function HomePage() {
       <section className="bg-slate-50 py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-slate-900 mb-3">How LaunchTrack works</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">How Rampify works</h2>
             <p className="text-slate-500 max-w-xl mx-auto">
               Set up once, run it for every client. Your onboarding becomes a repeatable system.
             </p>
@@ -156,7 +156,7 @@ export default function HomePage() {
               { step: '04', title: 'Launch', desc: 'Hit 100%. Log the completion, send a CSAT survey, and archive the project.' },
             ].map((s) => (
               <div key={s.step} className="text-center">
-                <div className="w-12 h-12 bg-blue-600 rounded-full text-white font-bold text-sm flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-red-700 rounded-full text-white font-bold text-sm flex items-center justify-center mx-auto mb-4">
                   {s.step}
                 </div>
                 <h3 className="font-semibold text-slate-900 mb-2">{s.title}</h3>
@@ -170,7 +170,7 @@ export default function HomePage() {
       {/* Testimonials */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-24">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-bold text-slate-900 mb-3">Agencies love LaunchTrack</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-3">Agencies love Rampify</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {TESTIMONIALS.map((t) => (
@@ -191,7 +191,7 @@ export default function HomePage() {
       </section>
 
       {/* Pricing CTA */}
-      <section className="bg-blue-600 py-20 text-white text-center">
+      <section className="bg-red-700 py-20 text-white text-center">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">Ready to streamline your onboarding?</h2>
           <p className="text-blue-100 mb-8 text-lg">
@@ -200,7 +200,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/register"
-              className="bg-white text-blue-700 font-semibold px-7 py-3.5 rounded-xl hover:bg-blue-50 transition-colors"
+              className="bg-white text-red-800 font-semibold px-7 py-3.5 rounded-xl hover:bg-red-50 transition-colors"
             >
               Start free trial
             </Link>

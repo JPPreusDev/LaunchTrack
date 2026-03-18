@@ -130,9 +130,9 @@ export function ClientTaskList({ tasks, projectId, organizationId }: ClientTaskL
               ) : status === 'waiting_on_client' ? (
                 <AlertCircle className="w-5 h-5 text-amber-400" />
               ) : status === 'in_progress' ? (
-                <Clock className="w-5 h-5 text-blue-400" />
+                <Clock className="w-5 h-5 text-red-500" />
               ) : (
-                <Circle className="w-5 h-5 text-slate-300 hover:text-blue-400" />
+                <Circle className="w-5 h-5 text-slate-300 hover:text-red-500" />
               )}
             </button>
 
@@ -194,7 +194,7 @@ export function ClientTaskList({ tasks, projectId, organizationId }: ClientTaskL
                 <span className={cn(
                   'text-xs px-2 py-0.5 rounded-full font-medium',
                   status === 'completed' && 'bg-green-100 text-green-700',
-                  status === 'in_progress' && 'bg-blue-100 text-blue-700',
+                  status === 'in_progress' && 'bg-red-100 text-red-800',
                   status === 'waiting_on_client' && 'bg-amber-100 text-amber-700'
                 )}>
                   {getStatusLabel(status)}

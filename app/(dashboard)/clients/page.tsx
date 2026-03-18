@@ -40,7 +40,7 @@ export default async function ClientsPage() {
         {profile.role === 'org_admin' && (
           <Link
             href="/clients/new"
-            className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+            className="inline-flex items-center gap-1.5 bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
           >
             <Plus className="w-4 h-4" />
             New Client
@@ -56,7 +56,7 @@ export default async function ClientsPage() {
           {profile.role === 'org_admin' && (
             <Link
               href="/clients/new"
-              className="inline-flex items-center gap-1.5 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center gap-1.5 bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-800 transition-colors"
             >
               <Plus className="w-4 h-4" />
               Add Client

@@ -109,7 +109,7 @@ export default async function ClientPortalPage({ params }: PageProps) {
 
   const org = project.organization as unknown as { id: string; name: string; logo_url: string | null; brand_color: string } | null
   const orgName = org?.name ?? 'Your Agency'
-  const accentColor = org?.brand_color ?? '#3b82f6'
+  const accentColor = org?.brand_color ?? '#B91C1C'
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -181,7 +181,7 @@ export default async function ClientPortalPage({ params }: PageProps) {
                   )}
                   {project.estimated_launch_date && (
                     <div className="flex items-center gap-2 text-sm">
-                      <Clock className="w-4 h-4 text-blue-500" />
+                      <Clock className="w-4 h-4 text-red-600" />
                       <span className="text-slate-600">
                         Estimated launch: <strong>{formatDate(project.estimated_launch_date)}</strong>
                       </span>

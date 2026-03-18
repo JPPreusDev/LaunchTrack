@@ -114,12 +114,12 @@ export default function PricingPage() {
               key={tier.name}
               className={`rounded-2xl border p-8 flex flex-col ${
                 tier.highlight
-                  ? 'border-blue-500 bg-blue-600 text-white shadow-xl'
+                  ? 'border-red-600 bg-red-700 text-white shadow-xl'
                   : 'border-slate-200 bg-white'
               }`}
             >
               {tier.highlight && (
-                <div className="inline-flex items-center gap-1 bg-blue-500 text-white text-xs font-medium px-2.5 py-1 rounded-full mb-4 self-start">
+                <div className="inline-flex items-center gap-1 bg-red-600 text-white text-xs font-medium px-2.5 py-1 rounded-full mb-4 self-start">
                   <Zap className="w-3 h-3" /> Most popular
                 </div>
               )}
@@ -149,8 +149,8 @@ export default function PricingPage() {
                 href="/register"
                 className={`w-full text-center py-3 rounded-xl font-semibold text-sm transition-colors ${
                   tier.highlight
-                    ? 'bg-white text-blue-700 hover:bg-blue-50'
-                    : 'bg-blue-600 text-white hover:bg-blue-700'
+                    ? 'bg-white text-red-800 hover:bg-red-50'
+                    : 'bg-red-700 text-white hover:bg-red-800'
                 }`}
               >
                 {tier.cta}
@@ -169,7 +169,7 @@ export default function PricingPage() {
                   <tr className="border-b border-slate-100">
                     <th className="px-6 py-4 text-left text-sm font-medium text-slate-500 w-1/2">Feature</th>
                     <th className="px-6 py-4 text-center text-sm font-medium text-slate-700">Starter</th>
-                    <th className="px-6 py-4 text-center text-sm font-medium text-blue-600 bg-blue-50/50">Growth</th>
+                    <th className="px-6 py-4 text-center text-sm font-medium text-red-700 bg-red-50/50">Growth</th>
                     <th className="px-6 py-4 text-center text-sm font-medium text-slate-700">Scale</th>
                   </tr>
                 </thead>
@@ -178,7 +178,7 @@ export default function PricingPage() {
                     <tr key={row.label} className="hover:bg-slate-50 transition-colors">
                       <td className="px-6 py-3.5 text-sm text-slate-600">{row.label}</td>
                       <td className="px-6 py-3.5 text-center"><FeatureCell value={row.starter} /></td>
-                      <td className="px-6 py-3.5 text-center bg-blue-50/30"><FeatureCell value={row.growth} /></td>
+                      <td className="px-6 py-3.5 text-center bg-red-50/30"><FeatureCell value={row.growth} /></td>
                       <td className="px-6 py-3.5 text-center"><FeatureCell value={row.scale} /></td>
                     </tr>
                   ))}
@@ -204,8 +204,8 @@ export default function PricingPage() {
                 a: 'We\'ll ask you to choose a plan. Your data is safe — nothing is deleted.',
               },
               {
-                q: 'Do clients need a LaunchTrack account?',
-                a: 'No. Clients access their portal via a magic link or password login. They never see the LaunchTrack brand.',
+                q: 'Do clients need a Rampify account?',
+                a: 'No. Clients access their portal via a magic link or password login. They never see the Rampify brand.',
               },
               {
                 q: 'Can I use my own domain for the client portal?',

@@ -61,7 +61,7 @@ export default async function SettingsPage() {
           </div>
           <Link
             href="/settings/invite"
-            className="text-sm text-blue-600 hover:underline font-medium"
+            className="text-sm text-red-700 hover:underline font-medium"
           >
             Invite member
           </Link>
@@ -93,10 +93,10 @@ export default async function SettingsPage() {
       <div className="grid grid-cols-2 gap-4">
         <Link
           href="/settings/integrations"
-          className="bg-white rounded-xl border border-slate-200 p-5 hover:border-blue-300 hover:shadow-sm transition-all group"
+          className="bg-white rounded-xl border border-slate-200 p-5 hover:border-red-400 hover:shadow-sm transition-all group"
         >
           <div className="flex items-center gap-2 mb-1">
-            <Plug className="w-4 h-4 text-blue-600" />
+            <Plug className="w-4 h-4 text-red-700" />
             <h3 className="font-semibold text-slate-900 text-sm">Integrations</h3>
             <ArrowRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-slate-500 ml-auto" />
           </div>
@@ -105,7 +105,7 @@ export default async function SettingsPage() {
 
         <Link
           href="/settings/portal"
-          className="bg-white rounded-xl border border-slate-200 p-5 hover:border-blue-300 hover:shadow-sm transition-all group"
+          className="bg-white rounded-xl border border-slate-200 p-5 hover:border-red-400 hover:shadow-sm transition-all group"
         >
           <div className="flex items-center gap-2 mb-1">
             <Globe className="w-4 h-4 text-violet-600" />
@@ -117,7 +117,7 @@ export default async function SettingsPage() {
 
         <Link
           href="/billing"
-          className="bg-white rounded-xl border border-slate-200 p-5 hover:border-blue-300 hover:shadow-sm transition-all group"
+          className="bg-white rounded-xl border border-slate-200 p-5 hover:border-red-400 hover:shadow-sm transition-all group"
         >
           <div className="flex items-center gap-2 mb-1">
             <span className="text-sm">💳</span>

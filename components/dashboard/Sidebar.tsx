@@ -56,11 +56,11 @@ export function Sidebar({ userRole, organizationName }: SidebarProps) {
       {/* Brand */}
       <div className="p-4 border-b border-slate-800">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+          <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
             <Zap className="w-4 h-4 text-white" />
           </div>
           <div className="overflow-hidden">
-            <p className="text-white font-semibold text-sm">LaunchTrack</p>
+            <p className="text-white font-semibold text-sm">Rampify</p>
             <p className="text-slate-400 text-xs truncate">{organizationName}</p>
           </div>
         </div>
@@ -81,7 +81,7 @@ export function Sidebar({ userRole, organizationName }: SidebarProps) {
               className={cn(
                 'flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors group',
                 isActive
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-red-700 text-white'
                   : 'text-slate-400 hover:text-white hover:bg-slate-800'
               )}
             >
@@ -95,7 +95,7 @@ export function Sidebar({ userRole, organizationName }: SidebarProps) {
 
       {/* Footer */}
       <div className="p-3 border-t border-slate-800">
-        <p className="text-xs text-slate-600 text-center">LaunchTrack v0.1</p>
+        <p className="text-xs text-slate-600 text-center">Rampify v0.1</p>
       </div>
     </aside>
   )

@@ -97,7 +97,7 @@ export function TopBar({ user }: TopBarProps) {
               {notifications.length > 0 && (
                 <button
                   onClick={markAllRead}
-                  className="text-xs text-blue-600 hover:underline"
+                  className="text-xs text-red-700 hover:underline"
                 >
                   Mark all read
                 </button>
@@ -128,8 +128,8 @@ export function TopBar({ user }: TopBarProps) {
           }}
           className="flex items-center gap-2 p-1.5 hover:bg-slate-100 rounded-lg transition-colors"
         >
-          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-            <span className="text-blue-700 text-xs font-semibold">
+          <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+            <span className="text-red-800 text-xs font-semibold">
               {getInitials(user.full_name ?? user.email)}
             </span>
           </div>

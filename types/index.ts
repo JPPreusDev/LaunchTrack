@@ -1,5 +1,5 @@
 /**
- * LaunchTrack - Core Type Definitions
+ * Rampify - Core Type Definitions
  */
 
 export type UserRole = 'org_admin' | 'team_member' | 'client_user'
@@ -269,7 +269,7 @@ export interface IntegrationMapping {
   id: string
   organization_id: string
   provider: string
-  launchtrack_project_id: string | null
+  rampify_project_id: string | null
   external_project_id: string
   mapping_type: string
   metadata: Record<string, unknown>
@@ -380,7 +380,7 @@ export const STATUS_LABELS: Record<ProjectStatus | TaskStatus, string> = {
 
 export const STATUS_COLORS: Record<ProjectStatus | TaskStatus, string> = {
   not_started: 'bg-gray-100 text-gray-700',
-  in_progress: 'bg-blue-100 text-blue-700',
+  in_progress: 'bg-red-100 text-red-800',
   waiting_on_client: 'bg-amber-100 text-amber-700',
   completed: 'bg-green-100 text-green-700',
   on_hold: 'bg-red-100 text-red-700',

@@ -199,11 +199,11 @@ export async function updateClickUpTaskStatus(
 }
 
 /**
- * Sync all tasks from a LaunchTrack project to ClickUp.
+ * Sync all tasks from a Rampify project to ClickUp.
  */
 export async function syncProjectToClickUp(
   organizationId: string,
-  launchtrackProjectId: string,
+  rampifyProjectId: string,
   clickupListId: string
 ): Promise<void> {
   const supabase = createServiceClient()
@@ -211,7 +211,7 @@ export async function syncProjectToClickUp(
   const { data: tasks } = await supabase
     .from('tasks')
     .select('*')
-    .eq('project_id', launchtrackProjectId)
+    .eq('project_id', rampifyProjectId)
 
   if (!tasks) return
 
@@ -222,9 +222,9 @@ export async function syncProjectToClickUp(
       .select('external_project_id')
       .eq('organization_id', organizationId)
       .eq('provider', 'clickup')
-      .eq('launchtrack_project_id', launchtrackProjectId)
+      .eq('rampify_project_id', rampifyProjectId)
       .eq('mapping_type', 'task')
-      .eq('metadata->>launchtrack_task_id', task.id)
+      .eq('metadata->>rampify_task_id', task.id)
       .maybeSingle()
 
     if (!existing) {
@@ -233,10 +233,10 @@ export async function syncProjectToClickUp(
       await supabase.from('integration_mappings').insert({
         organization_id: organizationId,
         provider: 'clickup',
-        launchtrack_project_id: launchtrackProjectId,
+        rampify_project_id: rampifyProjectId,
         external_project_id: clickupTask.id,
         mapping_type: 'task',
-        metadata: { launchtrack_task_id: task.id, list_id: clickupListId },
+        metadata: { rampify_task_id: task.id, list_id: clickupListId },
       })
     }
   }
@@ -247,7 +247,7 @@ export async function syncProjectToClickUp(
     .update({ last_synced_at: new Date().toISOString() })
     .eq('organization_id', organizationId)
     .eq('provider', 'clickup')
-    .eq('launchtrack_project_id', launchtrackProjectId)
+    .eq('rampify_project_id', rampifyProjectId)
     .eq('mapping_type', 'project')
 }
 
@@ -268,7 +268,7 @@ export async function handleClickUpWebhook(
   // Find mapping
   const { data: mapping } = await supabase
     .from('integration_mappings')
-    .select('*, launchtrack_project_id')
+    .select('*, rampify_project_id')
     .eq('provider', 'clickup')
     .eq('external_project_id', taskData)
     .eq('mapping_type', 'task')
@@ -276,20 +276,20 @@ export async function handleClickUpWebhook(
 
   if (!mapping) return
 
-  const taskId = (mapping.metadata as Record<string, string>)['launchtrack_task_id']
+  const taskId = (mapping.metadata as Record<string, string>)['rampify_task_id']
   const newStatus = (payload['task'] as Record<string, unknown>)?.['status'] as {
     status: string
   }
 
   if (!taskId || !newStatus?.status) return
 
-  const launchtrackStatus = CLICKUP_STATUS_REVERSE[newStatus.status.toLowerCase()]
-  if (!launchtrackStatus) return
+  const rampifyStatus = CLICKUP_STATUS_REVERSE[newStatus.status.toLowerCase()]
+  if (!rampifyStatus) return
 
   await supabase
     .from('tasks')
-    .update({ status: launchtrackStatus, updated_at: new Date().toISOString() })
+    .update({ status: rampifyStatus, updated_at: new Date().toISOString() })
     .eq('id', taskId)
 
-  console.log(`[ClickUp] Synced task ${taskId} status → ${launchtrackStatus}`)
+  console.log(`[ClickUp] Synced task ${taskId} status → ${rampifyStatus}`)
 }

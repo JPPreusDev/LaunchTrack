@@ -41,7 +41,7 @@ export function GettingStartedSection() {
       {/* Progress bar */}
       <div className="h-1 bg-slate-100">
         <div
-          className="h-1 bg-blue-500 transition-all duration-500"
+          className="h-1 bg-red-600 transition-all duration-500"
           style={{ width: `${(completedCount / TOUR_ORDER.length) * 100}%` }}
         />
       </div>
@@ -79,7 +79,7 @@ export function GettingStartedSection() {
                 )}
                 <button
                   onClick={() => startTour(tourId)}
-                  className="text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                  className="text-sm text-red-700 hover:text-red-800 font-medium transition-colors"
                 >
                   {isComplete ? 'Replay' : 'Start'}
                 </button>
