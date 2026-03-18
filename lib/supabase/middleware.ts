@@ -6,6 +6,7 @@
  *   myagency.com (CNAME'd)    →  same, after DB lookup for verified custom domain
  */
 import { createServerClient } from '@supabase/ssr'
+import type { CookieOptionsWithName } from '@supabase/ssr/dist/main/types'
 import { NextResponse, type NextRequest } from 'next/server'
 
 const SYSTEM_SUBDOMAINS = new Set(['www', 'app', 'api', 'studio'])
@@ -73,7 +74,7 @@ export async function updateSession(request: NextRequest) {
         getAll() {
           return request.cookies.getAll()
         },
-        setAll(cookiesToSet: { name: string; value: string; options: object }[]) {
+        setAll(cookiesToSet: { name: string; value: string; options: CookieOptionsWithName }[]) {
           cookiesToSet.forEach(({ name, value }) =>
             request.cookies.set(name, value)
           )

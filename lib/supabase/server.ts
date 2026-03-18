@@ -3,6 +3,7 @@
  * Use in Server Components, Server Actions, and Route Handlers.
  */
 import { createServerClient } from '@supabase/ssr'
+import type { CookieOptionsWithName } from '@supabase/ssr/dist/main/types'
 import { cookies } from 'next/headers'
 
 export async function createClient() {
@@ -16,7 +17,7 @@ export async function createClient() {
         getAll() {
           return cookieStore.getAll()
         },
-        setAll(cookiesToSet: { name: string; value: string; options: Parameters<typeof cookieStore.set>[2] }[]) {
+        setAll(cookiesToSet: { name: string; value: string; options: CookieOptionsWithName }[]) {
           try {
             cookiesToSet.forEach(({ name, value, options }) =>
               cookieStore.set(name, value, options)
