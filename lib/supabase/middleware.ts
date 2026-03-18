@@ -5,7 +5,7 @@
  *   myagency.onrampd.com  →  sets x-portal-org header, rewrites / to /portal/login
  *   myagency.com (CNAME'd)    →  same, after DB lookup for verified custom domain
  */
-import { createServerClient, type CookieOptionsWithName } from '@supabase/ssr'
+import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
 const SYSTEM_SUBDOMAINS = new Set(['www', 'app', 'api', 'studio'])
@@ -73,7 +73,7 @@ export async function updateSession(request: NextRequest) {
         getAll() {
           return request.cookies.getAll()
         },
-        setAll(cookiesToSet: { name: string; value: string; options: CookieOptionsWithName }[]) {
+        setAll(cookiesToSet: { name: string; value: string; options: object }[]) {
           cookiesToSet.forEach(({ name, value }) =>
             request.cookies.set(name, value)
           )

@@ -29,7 +29,13 @@
       "Bash(sed:*)",
       "Bash(npx skills:*)",
       "WebFetch(domain:www.namecheap.com)",
-      "WebFetch(domain:instantdomainsearch.com)"
+      "WebFetch(domain:instantdomainsearch.com)",
+      "Bash(rm:*)",
+      "Bash(\"/c/Users/Dell/Downloads/Claude Project/onboarding/launchtrack/.env.local\":*)",
+      "Bash(node:*)",
+      "Bash(npm show:*)",
+      "Bash(echo:*)",
+      "Bash(grep \"\"version\"\":*)"
     ]
   }
 }
